@@ -1,0 +1,7 @@
+/site/.vscode
+/site/env/
+/site/__pycache__/
+/site/sendMail.pyc
+/site/keys.txt
+/site/credentials.json
+/site/token.pickle

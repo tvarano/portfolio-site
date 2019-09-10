@@ -1,0 +1,522 @@
+.doc img {
+    width: 100%;
+}
+
+.doc-wrapper {
+    position: absolute;
+    margin: 0px;
+}
+
+.doc {
+    display: block;
+    background: white;
+    border: 2px solid var(--teal);
+    padding: 5px;
+    width: 450px;
+    height: 258px;
+    margin-left: 40px;
+    cursor: pointer;
+    /* border-width: 0px; */
+    transition: all 0.5s;
+}
+
+.doc.active {
+    height: 350px;
+    box-shadow: var(--shadow);
+    transition: all 0.5s;
+}
+
+.doc-wrapper h3 {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.doc button.active {
+    width: 120px;
+    padding: 5px;
+    transition: all 0.25s;
+}
+
+.doc button {
+    font-family: var(--p-font-family);
+    font-weight: 300;
+    font-size: 1em;
+    display: block;
+    color: white;
+    background: var(--teal);
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    width: 0px;
+    padding: 0px;
+    transition: all 0.25s;
+}
+
+.doc button.left {
+    float: right;
+}
+
+.doc button.right {
+    float: left;
+}
+
+.doc .button-holder {
+    display: inline-block;
+    /* width: 48%; */
+    width: 0px;
+    top: 0px;
+    background: var(--purp);
+    transition: width 0.25s;
+    vertical-align: top;
+    /* background: pink; */
+}
+
+.doc .button-holder.active {
+    width: 120px;
+    transition: width 0.25s;
+}
+
+.doc-buttons {
+    width: 100%;
+    font-size: 0px;
+    text-align: center;
+}
+
+.doc button p {
+    display: none;
+    color: white;
+    font-size: 11pt;
+    vertical-align: middle;
+    font-family: var(--p-font-family);
+    height: inherit;
+}
+
+.doc button p.active {
+    display: block;
+}
+
+.doc-separator {
+    margin-left: auto;
+    margin-right: auto;
+    width: 0px;
+    height: 5px;
+    margin-bottom: 10px;
+    background: var(--purp);
+    transition: width 0.5s;
+} 
+
+.doc-separator.active {
+    width: 100px;
+    transition: width 0.5s;
+}
+
+.doc-button.right {
+    float: right;
+}
+
+#card-wrapper {
+    z-index: 1;
+}
+
+@media (max-width: 550px) {
+    .doc {
+        width: 300px !important;
+        height: 175px !important;
+    }
+
+    .doc.active {
+        height: 260px !important;
+    }
+
+    #resume-wrapper {
+        top: 350px !important;
+    }
+
+    #top-padding {
+        /* marign-top: 550px !important; */
+        margin-top: 0px !important;
+    }
+}
+
+@media (max-width: 1050px) {
+    /* have the cards in line together */
+    .doc-wrapper {
+        width: 100%;
+    }
+
+    .doc-wrapper h3 {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .doc {
+        width: 500px;
+        height: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .doc.active {
+        height: 380px;
+    }
+
+    #resume-wrapper {
+        top: 450px;
+        left: 0px !important;
+    }
+
+    #top-padding {
+        margin-top: 200px;
+        height: 550px !important;
+    }
+}
+
+@media (max-width: 1350px) {
+    /* bump phone to another line */
+    #phone-wrapper {
+        width: 100%;
+    }
+
+    #top-padding {
+        height: 350px;
+        width: 100%;
+    }
+
+    #email-wrapper {
+        margin-top: 30px !important;
+    }
+
+    #resume-wrapper {
+        right: 30px;
+    }
+}
+
+/* just normal stuff */
+
+#resume-wrapper {
+    left: 500px;
+}
+
+/* Done with card */
+
+#phone-wrapper {
+    margin: 0px 20px 20px;
+}
+
+@media (min-width: 1350px) {
+    #phone-wrapper {
+        float: right;
+    }
+}
+
+#phone-wrapper img {
+    height: 100px;
+    width: auto;
+    display: inline-block;
+}
+
+.phone {
+    background: var(--purp);
+    z-index: 10;
+    /* display: block; */
+    padding: 5px;
+    transition: all 0.25s;
+}
+
+.phone p {
+    display: inline-block;
+    vertical-align: top;
+    font-family: var(--p-font-family);
+    margin-top: 35px;
+    font-size: 1.5em;
+    margin-bottom: auto;
+    color: white;
+}
+
+#add-to-contacts {
+    display: block;
+    margin-top: 15px;
+}
+
+/* email */
+#email-wrapper {
+    display: block;
+    margin: 380px 0 0 0;
+}
+
+#email-content {
+    margin: 20px;
+}
+
+#email-to {
+    font-family: var(--p-font-family);
+    font-weight: 400;
+    float: right; 
+    font-size: 1.2em;
+    margin: 12px 15px;
+}
+
+#email-to a {
+    color: black;
+    margin-bottom: 2px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=email], select, textarea {
+    width: 100%; 
+    padding: 12px;  
+    font-family: var(--p-font-family);
+    font-size: 1em;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+    transition: all 0.25s;
+}
+
+input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus {
+    outline: none !important;
+    border:3px solid var(--teal);
+    /* box-shadow: 0 0 10px #719ECE; */
+    transition: all 0.25s;
+}
+
+input[type=submit] {
+  background-color: var(--purp);
+  color: white;
+  font-family: var(--p-font-family);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  /* border-radius: 5px; */
+  background: white;
+  color: black;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.submission-status {
+    background: white;
+    padding: 5px;
+    font-size: 15pt;
+    margin-bottom: 10px;
+}
+
+.submit-confirmation {
+    color: green;
+}
+
+.submit-denial {
+    color: red;
+}
+
+/* Media Buttons */
+
+#media-wrapper {
+    margin-left: 20px;
+    width: calc(100% - 20px);
+}
+
+#media-wrapper ul {
+    list-style: none;
+    padding: 0%;
+    margin-left: 0%;
+    margin-top: 2px;
+    z-index: inherit;
+    /* white-space: nowrap; */
+    display: block;
+}
+
+#media-wrapper ul li {
+    width: 60px !important;
+    height: 60px !important;
+    max-height: 60px;
+    max-width: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    line-height: 1px;
+    margin: 5px 5px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 100%;
+    border: 1px solid #D8E2DC;
+    /* white-space: nowrsap !important; */
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+
+#media-wrapper li:hover {
+    /* margin: 5px 5px; */
+    transition: all 0.5s ease;
+}
+
+#media-wrapper a {
+    margin: 0px;
+}
+
+/* Style the icons by setting its color and margin-top value to 20px
+to align it properly */
+#media-wrapper ul li .fa {
+    transition: all 0.5s ease;
+    /* color: #D8E2DC; */
+    color: var(--teal);
+    opacity: 0.7;
+    padding: 13px 10px 10px 10px;
+}
+
+#media-wrapper ul li:hover .fa {
+    opacity: 1;
+}
+
+/*facebook*/
+
+#media-wrapper ul li:hover.facebook {
+    border: 1px solid #3b5998;
+    box-shadow: 0 0 10px #3b5998;
+}
+
+#media-wrapper ul li:hover .fa-facebook {
+    color: #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+    transition: all 0.5s ease;
+}
+
+/*twitter*/
+
+#media-wrapper ul li:hover.twitter {
+    border: 1px solid #00aced;
+    box-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-twitter {
+    color: #00aced;
+    text-shadow: 0 0 15px #00aced;
+    transition: all 0.5s ease;
+}
+
+/* instagram */
+#media-wrapper ul li:hover.instagram {
+    border: 1px solid #bc2a8d;
+    box-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-instagram {
+    color: #bc2a8d;
+    text-shadow: 0 0 15px #bc2a8d;
+    transition: all 0.5s ease;
+}
+
+/* snapchat */
+
+#media-wrapper ul li:hover.snapchat {
+    border: 1px solid #fffc00;
+    box-shadow: 0 0 15px #fffc00;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-snapchat {
+    color: #fffc00;
+    text-shadow: 0 0 15px #fffc00;
+    transition: all 0.5s ease;
+}
+
+/* google */
+#media-wrapper ul li:hover.google {
+    border: 1px solid #dd4b39;
+    box-shadow: 0 0 15px #dd4b39;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-google {
+    color: #dd4b39;
+    text-shadow: 0 0 15px #dd4b39;
+    transition: all 0.5s ease;
+}
+
+/* github */
+#media-wrapper ul li:hover.github {
+    border: 1px solid black;
+    box-shadow: 0 0 15px black;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-github {
+    color: black;
+    text-shadow: 0 0 15px black;
+    transition: all 0.5s ease;
+}
+
+/* linkedin */
+#media-wrapper ul li:hover.linkedin {
+    border: 1px solid #0077b5;
+    box-shadow: 0 0 15px #0077b5;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-linkedin {
+    color: #0077b5;
+    text-shadow: 0 0 15px #0077b5;
+    transition: all 0.5s ease;
+}
+
+/* spotify */
+#media-wrapper ul li:hover.spotify {
+    border: 1px solid #1db954;
+    box-shadow: 0 0 15px #1db954;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-spotify {
+    color: #1db954;
+    text-shadow: 0 0 15px #1db954;
+    transition: all 0.5s ease;
+}
+
+/* lastfm */
+#media-wrapper ul li:hover.lastfm {
+    border: 1px solid #d51007;
+    box-shadow: 0 0 15px #d51007;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-lastfm {
+    color: #d51007;
+    text-shadow: 0 0 15px #d51007;
+    transition: all 0.5s ease;
+}
+
+/* steam */
+#media-wrapper ul li:hover.steam {
+    border: 1px solid #00adee;
+    box-shadow: 0 0 15px #00adee;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-steam {
+    color: #00adee;
+    text-shadow: 0 0 15px #00adee;
+    transition: all 0.5s ease;
+}
+
+/* reddit */
+#media-wrapper ul li:hover.reddit {
+    border: 1px solid #ff4500;
+    box-shadow: 0 0 15px #ff4500;
+    transition: all 0.5s ease;
+}
+
+#media-wrapper ul li:hover .fa-reddit {
+    color: #ff4500;
+    text-shadow: 0 0 15px #ff4500;
+    transition: all 0.5s ease;
+}

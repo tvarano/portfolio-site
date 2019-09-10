@@ -1,0 +1,149 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;  
+  background: transparent;
+}
+
+
+#index-name {
+  font-family: var(--h-font-family);
+  color: white;
+  font-size: 15vw;
+    font-weight: 300;
+    margin: 0px;
+    /* z-index: -1; */
+    text-align: center;
+  }
+  
+  #main-content {
+    background-color: var(--teal);
+    height: calc(100vh - var(--header-height));
+}
+
+#index-wrap {
+  min-height: calc(100vh - var(--header-height));
+  margin: 0;
+}
+
+#intro {
+    text-align: center;
+    font-family: var(--p-font-family);
+    color: white;
+    font-weight: 300;
+    font-size: 2vw;
+}
+
+@media (max-width: 700px) {
+    #intro {
+        font-size: 4vw;
+    }
+    
+    #index-name {
+        font-size: 20vw;
+    }
+}
+
+/* if less than 1100, make text big and uncenter */
+
+@media screen and (orientation: portrait) {
+  #index-name {
+    font-size: 20vw;
+    text-align: left;
+    margin-left: 10px;
+  }
+  #intro {
+    font-size: 4.5vw;
+  }
+}
+
+#quick-links-wrap {
+  padding: 10px;
+  margin-top: 60px;
+  background-color: var(--purp);   
+}
+
+#quick-links {
+  font-size: 0px;
+  width: 75vw;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  white-space: normal;
+  transition: all 0.5s;
+}
+
+.link-group {
+  width: 50%;
+  display: inline-block;
+}
+
+#links-left {
+  text-align: right;
+}
+
+#links-right {
+  float: right;
+}
+
+#quick-links svg {
+  width: 100%;
+  height: auto;
+}
+
+.quick-links-margin {
+  /* display: inline-block; */
+  display: none;
+  /* width: calc((65vw - 380px) / 3); */
+  height: 10px;
+}
+
+.quick-link:hover {
+  fill: white;
+  transition: all 0.5s;
+}
+
+.quick-link {
+  padding: 2%;
+  width: 40%;
+  height: 40%;
+  margin-left: 2%;
+  margin-right: 2%;
+  fill: var(--teal);
+  display: inline-block;
+  transition: all 0.5s;
+
+}
+
+#quick-links .email:before {
+  background: var(--teal);
+}
+
+#quick-links .github:before {
+  background: black;
+}
+
+#quick-links .resume:before {
+  background: var(--teal);
+}
+
+#quick-links .linkedin:before {
+  background: #0077b5;
+}
+
+#quick-links .linkedin {
+  margin-right: 0px;
+} 
+
+/* #quick-links .linkedin, #quick-links .github {
+  float: right;
+} */
+
+@media (max-width: 600px) {
+    .quick-links-margin {
+        /* width: calc((65vw - 190) / 2) !important; */
+        width: 0px;
+    } 
+}

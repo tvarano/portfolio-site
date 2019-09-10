@@ -1,0 +1,8 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Tom Varano
+N:Varano;Tom;;;
+item1.EMAIL;TYPE=INTERNET:thvarano@gmail.com
+item1.X-ABLabel:
+TEL;TYPE=CELL:2018873953
+END:VCARD
