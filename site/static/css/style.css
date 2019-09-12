@@ -287,11 +287,6 @@ main button {
     font-size: 1.2em;
 }
 
-.copy-holder {
-    position: absolute;
-    left: -200px; width: 10px;
-}
-
 /* END CONTENT */
 
 @media (max-width: 400px) {
