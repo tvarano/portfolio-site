@@ -2,7 +2,7 @@ const current_year = new Date().getFullYear();
 
 // languages in order of appearance in parallel with dates
 var langs = ['java', 'python', 'javascript', 'swift', 'html', 'c', 'git', 'oauth', 'flask', 'jquery', 'bash'];
-var years = [2016, 2018, 2019, 2018, 2018, 2019, 2016, 2018, 2018, 2019, 2017];
+var years = [2015, 2018, 2018, 2018, 2018, 2019, 2016, 2018, 2018, 2019, 2016];
 
 for (var i = 0; i < langs.length; i++) {
     const yearWord = (current_year - years[i] <= 1) ? "year" : "years";
