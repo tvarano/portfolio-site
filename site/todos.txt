@@ -21,4 +21,4 @@ fix quick links on edge
     fixed for now, but figure out better way to center 4 elems
 
 
-get a good picture
+DONE get a good picture

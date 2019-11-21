@@ -6,7 +6,9 @@
     display: table-cell;
     border: 5px solid var(--teal);
     margin-right: 20px;
+    object-fit: cover;
 }
+
 
 #bio {
     display: table-cell;

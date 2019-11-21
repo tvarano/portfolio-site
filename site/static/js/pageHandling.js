@@ -44,9 +44,6 @@ $("#logo-wrapper" ).click(function() {
     }
 });
 
-// make the body taller to account for the footer
-// $("#main-content")[0].style.height = $("#main-content")[0].offsetHeight + $("#main-footer")[0].offsetHeight + "px"
-
 // FULL SETUP OF DESKTOP NAV
 var minWidth = 700
 if (useMob) {
@@ -71,22 +68,6 @@ document.body.onscroll = function() {
         $("#main-header")[0].classList.add("scrolled")
 };
 
-//mobile or desktop nav ENSURE DETECTION
-/*
-try {
-    if (!isMob)  {
-        $(".doc").each(function() {
-            this.classList.add("desktop")
-        })
-        $("#phone-wrapper")[0].classList.add("desktop")
-    } else {
-        $("#phone-wrapper")[0].style.marginTop = $(".card-wrapper")[0].getBoundingClientRect().height + 20 + "px"
-    }
-}
-catch(error) {
-    console.log("not on contact")
-}
-*/
 
 // go to given address from button
 function goTo(button_id) {
