@@ -10,7 +10,7 @@ html {
 
 #index-name {
   font-family: var(--h-font-family);
-  color: white;
+  color: var(--secondary);
   font-size: 15vw;
     font-weight: 300;
     margin: 0px;
@@ -19,7 +19,7 @@ html {
   }
   
   #main-content {
-    background-color: var(--teal);
+    /* background-color: var(--secondary); */
     height: calc(100vh - var(--header-height));
 }
 
@@ -31,7 +31,7 @@ html {
 #intro {
     text-align: center;
     font-family: var(--p-font-family);
-    color: white;
+    color: var(--secondary);
     font-weight: 300;
     font-size: 2vw;
 }
@@ -62,7 +62,7 @@ html {
 #quick-links-wrap {
   padding: 10px;
   margin-top: 60px;
-  background-color: var(--purp);   
+  background-color: var(--primary);   
 }
 
 #quick-links {
@@ -111,14 +111,14 @@ html {
   height: 40%;
   margin-left: 2%;
   margin-right: 2%;
-  fill: var(--teal);
+  fill: var(--secondary);
   display: inline-block;
   transition: all 0.5s;
 
 }
 
 #quick-links .email:before {
-  background: var(--teal);
+  background: var(--secondary);
 }
 
 #quick-links .github:before {
@@ -126,7 +126,7 @@ html {
 }
 
 #quick-links .resume:before {
-  background: var(--teal);
+  background: var(--secondary);
 }
 
 #quick-links .linkedin:before {

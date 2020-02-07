@@ -1,18 +1,22 @@
 #my-face {
     width: 200px;
     height: 200px;
+    overflow: hidden;
     float: left;
     border-radius: 100px;
     display: table-cell;
-    border: 5px solid var(--teal);
+    border: 5px solid var(--secondary);
     margin-right: 20px;
     object-fit: cover;
 }
 
+#my-face img {
+    width: 300px;
+    margin: -20px 0 0 -20px;
+}
 
 #bio {
     display: table-cell;
-    /* left: 250px; */
     padding-top: 15px;
     padding-left: 20px;
     font-weight: 300;
@@ -36,9 +40,11 @@ aside {
 
     #bio {
         padding-left: 10px;
+        display: block;
     }
 
     #my-face {
+        display: block;
         margin: 0px auto 0px auto;
         float: none !important;
     }
@@ -148,7 +154,7 @@ aside {
     font-size: 1.4em;
     font-family: var(--h-font-family);
     padding: 5px;
-    color: var(--purp);
+    color: var(--primary);
     margin: 5px;
 }
 

@@ -4,7 +4,7 @@
     font-family: var(--p-font-family);
     font-size: 2em;
     font-weight: 300;
-    background: var(--teal);
+    background: var(--secondary);
     color: white;
 }
 
@@ -22,7 +22,7 @@
     margin: 0;
     margin-top: 10px;
     
-    border: solid var(--teal) 10px;
+    border: solid var(--secondary) 10px;
 }
 
 #action-buttons {

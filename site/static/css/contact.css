@@ -2,6 +2,13 @@
     width: 100%;
 }
 
+.doc .img-holder {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
 .doc-wrapper {
     position: absolute;
     margin: 0px;
@@ -10,7 +17,7 @@
 .doc {
     display: block;
     background: white;
-    border: 2px solid var(--teal);
+    border: 2px solid var(--secondary);
     padding: 5px;
     width: 450px;
     height: 258px;
@@ -43,7 +50,7 @@
     font-size: 1em;
     display: block;
     color: white;
-    background: var(--teal);
+    background: var(--secondary);
     border: none;
     cursor: pointer;
     height: 60px;
@@ -65,7 +72,7 @@
     /* width: 48%; */
     width: 0px;
     top: 0px;
-    background: var(--purp);
+    background: var(--primary);
     transition: width 0.25s;
     vertical-align: top;
     /* background: pink; */
@@ -101,7 +108,7 @@
     width: 0px;
     height: 5px;
     margin-bottom: 10px;
-    background: var(--purp);
+    background: var(--primary);
     transition: width 0.5s;
 } 
 
@@ -122,6 +129,10 @@
     .doc {
         width: 300px !important;
         height: 175px !important;
+    }
+
+    .doc .img-holder {
+        height: 170px !important;
     }
 
     .doc.active {
@@ -155,6 +166,10 @@
         height: 300px;
         margin-right: auto;
         margin-left: auto;
+    }
+
+    .doc .img-holder {
+        height: 290px;
     }
 
     .doc.active {
@@ -217,7 +232,7 @@
 }
 
 .phone {
-    background: var(--purp);
+    background: var(--primary);
     z-index: 10;
     /* display: block; */
     padding: 5px;
@@ -279,13 +294,13 @@ input[type=text], input[type=email], select, textarea {
 
 input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus {
     outline: none !important;
-    border:3px solid var(--teal);
+    border:3px solid var(--secondary);
     /* box-shadow: 0 0 10px #719ECE; */
     transition: all 0.25s;
 }
 
 input[type=submit] {
-  background-color: var(--purp);
+  background-color: var(--primary);
   color: white;
   font-family: var(--p-font-family);
   padding: 12px 20px;
@@ -317,206 +332,3 @@ input[type=submit] {
     color: red;
 }
 
-/* Media Buttons */
-
-#media-wrapper {
-    margin-left: 20px;
-    width: calc(100% - 20px);
-}
-
-#media-wrapper ul {
-    list-style: none;
-    padding: 0%;
-    margin-left: 0%;
-    margin-top: 2px;
-    z-index: inherit;
-    /* white-space: nowrap; */
-    display: block;
-}
-
-#media-wrapper ul li {
-    width: 60px !important;
-    height: 60px !important;
-    max-height: 60px;
-    max-width: 60px;
-    min-width: 60px;
-    min-height: 60px;
-    line-height: 1px;
-    margin: 5px 5px;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 100%;
-    border: 1px solid #D8E2DC;
-    /* white-space: nowrsap !important; */
-    display: inline-block;
-    transition: all 0.5s ease;
-}
-
-
-#media-wrapper li:hover {
-    /* margin: 5px 5px; */
-    transition: all 0.5s ease;
-}
-
-#media-wrapper a {
-    margin: 0px;
-}
-
-/* Style the icons by setting its color and margin-top value to 20px
-to align it properly */
-#media-wrapper ul li .fa {
-    transition: all 0.5s ease;
-    /* color: #D8E2DC; */
-    color: var(--teal);
-    opacity: 0.7;
-    padding: 13px 10px 10px 10px;
-}
-
-#media-wrapper ul li:hover .fa {
-    opacity: 1;
-}
-
-/*facebook*/
-
-#media-wrapper ul li:hover.facebook {
-    border: 1px solid #3b5998;
-    box-shadow: 0 0 10px #3b5998;
-}
-
-#media-wrapper ul li:hover .fa-facebook {
-    color: #3b5998;
-    text-shadow: 0 0 15px #3b5998;
-    transition: all 0.5s ease;
-}
-
-/*twitter*/
-
-#media-wrapper ul li:hover.twitter {
-    border: 1px solid #00aced;
-    box-shadow: 0 0 15px #00aced;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-twitter {
-    color: #00aced;
-    text-shadow: 0 0 15px #00aced;
-    transition: all 0.5s ease;
-}
-
-/* instagram */
-#media-wrapper ul li:hover.instagram {
-    border: 1px solid #bc2a8d;
-    box-shadow: 0 0 15px #bc2a8d;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-instagram {
-    color: #bc2a8d;
-    text-shadow: 0 0 15px #bc2a8d;
-    transition: all 0.5s ease;
-}
-
-/* snapchat */
-
-#media-wrapper ul li:hover.snapchat {
-    border: 1px solid #fffc00;
-    box-shadow: 0 0 15px #fffc00;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-snapchat {
-    color: #fffc00;
-    text-shadow: 0 0 15px #fffc00;
-    transition: all 0.5s ease;
-}
-
-/* google */
-#media-wrapper ul li:hover.google {
-    border: 1px solid #dd4b39;
-    box-shadow: 0 0 15px #dd4b39;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-google {
-    color: #dd4b39;
-    text-shadow: 0 0 15px #dd4b39;
-    transition: all 0.5s ease;
-}
-
-/* github */
-#media-wrapper ul li:hover.github {
-    border: 1px solid black;
-    box-shadow: 0 0 15px black;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-github {
-    color: black;
-    text-shadow: 0 0 15px black;
-    transition: all 0.5s ease;
-}
-
-/* linkedin */
-#media-wrapper ul li:hover.linkedin {
-    border: 1px solid #0077b5;
-    box-shadow: 0 0 15px #0077b5;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-linkedin {
-    color: #0077b5;
-    text-shadow: 0 0 15px #0077b5;
-    transition: all 0.5s ease;
-}
-
-/* spotify */
-#media-wrapper ul li:hover.spotify {
-    border: 1px solid #1db954;
-    box-shadow: 0 0 15px #1db954;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-spotify {
-    color: #1db954;
-    text-shadow: 0 0 15px #1db954;
-    transition: all 0.5s ease;
-}
-
-/* lastfm */
-#media-wrapper ul li:hover.lastfm {
-    border: 1px solid #d51007;
-    box-shadow: 0 0 15px #d51007;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-lastfm {
-    color: #d51007;
-    text-shadow: 0 0 15px #d51007;
-    transition: all 0.5s ease;
-}
-
-/* steam */
-#media-wrapper ul li:hover.steam {
-    border: 1px solid #00adee;
-    box-shadow: 0 0 15px #00adee;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-steam {
-    color: #00adee;
-    text-shadow: 0 0 15px #00adee;
-    transition: all 0.5s ease;
-}
-
-/* reddit */
-#media-wrapper ul li:hover.reddit {
-    border: 1px solid #ff4500;
-    box-shadow: 0 0 15px #ff4500;
-    transition: all 0.5s ease;
-}
-
-#media-wrapper ul li:hover .fa-reddit {
-    color: #ff4500;
-    text-shadow: 0 0 15px #ff4500;
-    transition: all 0.5s ease;
-}
