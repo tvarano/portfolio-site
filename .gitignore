@@ -1,5 +1,5 @@
 /site/.vscode
-/site/env/
+/env/
 /site/__pycache__/
 /site/sendMail.pyc
 /site/keys.txt

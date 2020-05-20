@@ -8,26 +8,24 @@
 
 
 <url>
-  <loc>http://www.tomvarano.com/</loc>
-  <lastmod>2020-04-04T18:24:12+00:00</lastmod>
+  <loc>http://tomvarano.com/</loc>
+  <lastmod>2020-05-20T19:12:19+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://www.tomvarano.com/about</loc>
-  <lastmod>2020-02-07T20:36:02+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-<url>
-  <loc>http://www.tomvarano.com/contact</loc>
-  <lastmod>2020-04-04T18:24:12+00:00</lastmod>
+  <loc>http://tomvarano.com/about</loc>
+  <lastmod>2020-05-20T19:12:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.tomvarano.com/resume</loc>
-  <lastmod>2020-04-04T18:24:12+00:00</lastmod>
+  <loc>http://tomvarano.com/contact</loc>
+  <lastmod>2020-05-20T19:12:19+00:00</lastmod>
   <priority>0.80</priority>
 </url>
-
+<url>
+  <loc>http://tomvarano.com/resume</loc>
+  <lastmod>2020-05-20T19:12:19+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>

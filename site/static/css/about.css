@@ -131,10 +131,24 @@ aside {
     height: 100px;
 }
 
+@media (min-width: 650px) {
+    .projects-container {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
 .project-wrapper {
     background: lightgray;
     padding: 20px;
+    margin: 0 10px 10px 10px;
+    display: block;
     padding-bottom: 10px;
+
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
 }
 
 .project-wrapper img {
@@ -249,3 +263,10 @@ background: linear-gradient(100deg, rgba(228,77,38,1) 50%, rgba(38,77,228,1) 70%
     background: #14a2e7;
 }
 
+.sqlite-tool:hover {
+    background: #69bbea;
+}
+
+.gcloud-tool:hover {
+    background: #ea4335;
+}
