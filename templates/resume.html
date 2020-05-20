@@ -1,0 +1,52 @@
+{% extends "layouts/layout.html" %}
+
+{% block title %}Resume | Tom Varano{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/css/resume.css">
+<meta name="description" content="Printable, saveable resume for Tom Varano.">
+{% endblock %}
+
+{% block content %}
+<script src="static/js/resume.js"></script>
+    <section id="action-buttons">
+        <a href="static/src/resume.pdf" download><button class="hvr-sweep-to-right">Download</button></a>
+        <button class="hvr-sweep-to-right" onclick="copyResume()">Copy Link</button>
+        <button class="hvr-sweep-to-right" onclick="printResume()">Print</button>
+    </section>
+    <section id="resume-wrap">
+        <iframe src="static/src/resume.pdf" id="resume-frame" name="resume-frame"></iframe>
+    </section>
+
+    <!-- resume for printing -->
+    <!-- <embed
+        type="application/pdf"
+        src="static/src/resume.pdf"
+        id="printable-resume"
+        width="100%"
+        height="100%">
+    </embed> -->
+
+    <input id="copy-url-holder" style="position: absolute; left: -200px; width: 10px;" type="text" value="">
+
+
+
+<!-- <section>
+    <p style="display: inline;">You will be redirected in </p>
+    <p style="display: inline;" id="counter">5</p>
+    <p style="display: inline;">...</p>
+    <p style="margin-top: 30px;">Click <a style="color: var(--purp);">here</a> if not redirected</p>
+
+    <script>
+        var countdownElem = $("#counter")[0]
+        var countsLeft = 5
+        setInterval(runCountdown, 1000)
+        function runCountdown() {
+            countsLeft--
+            countdownElem.innerHTML = countsLeft
+            if (countsLeft == 0)
+                window.location = "http://" + document.URL.split('/')[2] + '/static/src/resume.pdf'
+        }
+    </script>
+</section> -->
+{% endblock %}

@@ -1,0 +1,7 @@
+.vscode
+/__pycache__/
+/sendMail.pyc
+/keys.txt
+/credentials.json
+/token.pickle
+/app.yaml

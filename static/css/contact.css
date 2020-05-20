@@ -1,0 +1,334 @@
+.doc img {
+    width: 100%;
+}
+
+.doc .img-holder {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.doc-wrapper {
+    position: absolute;
+    margin: 0px;
+}
+
+.doc {
+    display: block;
+    background: white;
+    border: 2px solid var(--secondary);
+    padding: 5px;
+    width: 450px;
+    height: 258px;
+    margin-left: 40px;
+    cursor: pointer;
+    /* border-width: 0px; */
+    transition: all 0.5s;
+}
+
+.doc.active {
+    height: 350px;
+    box-shadow: var(--shadow);
+    transition: all 0.5s;
+}
+
+.doc-wrapper h3 {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.doc button.active {
+    width: 120px;
+    padding: 5px;
+    transition: all 0.25s;
+}
+
+.doc button {
+    font-family: var(--p-font-family);
+    font-weight: 300;
+    font-size: 1em;
+    display: block;
+    color: white;
+    background: var(--secondary);
+    border: none;
+    cursor: pointer;
+    height: 60px;
+    width: 0px;
+    padding: 0px;
+    transition: all 0.25s;
+}
+
+.doc button.left {
+    float: right;
+}
+
+.doc button.right {
+    float: left;
+}
+
+.doc .button-holder {
+    display: inline-block;
+    /* width: 48%; */
+    width: 0px;
+    top: 0px;
+    background: var(--primary);
+    transition: width 0.25s;
+    vertical-align: top;
+    /* background: pink; */
+}
+
+.doc .button-holder.active {
+    width: 120px;
+    transition: width 0.25s;
+}
+
+.doc-buttons {
+    width: 100%;
+    font-size: 0px;
+    text-align: center;
+}
+
+.doc button p {
+    display: none;
+    color: white;
+    font-size: 11pt;
+    vertical-align: middle;
+    font-family: var(--p-font-family);
+    height: inherit;
+}
+
+.doc button p.active {
+    display: block;
+}
+
+.doc-separator {
+    margin-left: auto;
+    margin-right: auto;
+    width: 0px;
+    height: 5px;
+    margin-bottom: 10px;
+    background: var(--primary);
+    transition: width 0.5s;
+} 
+
+.doc-separator.active {
+    width: 100px;
+    transition: width 0.5s;
+}
+
+.doc-button.right {
+    float: right;
+}
+
+#card-wrapper {
+    z-index: 1;
+}
+
+@media (max-width: 550px) {
+    .doc {
+        width: 300px !important;
+        height: 175px !important;
+    }
+
+    .doc .img-holder {
+        height: 170px !important;
+    }
+
+    .doc.active {
+        height: 260px !important;
+    }
+
+    #resume-wrapper {
+        top: 350px !important;
+    }
+
+    #top-padding {
+        /* marign-top: 550px !important; */
+        margin-top: 0px !important;
+    }
+}
+
+@media (max-width: 1050px) {
+    /* have the cards in line together */
+    .doc-wrapper {
+        width: 100%;
+    }
+
+    .doc-wrapper h3 {
+        width: 100%;
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    .doc {
+        width: 500px;
+        height: 300px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .doc .img-holder {
+        height: 290px;
+    }
+
+    .doc.active {
+        height: 380px;
+    }
+
+    #resume-wrapper {
+        top: 450px;
+        left: 0px !important;
+    }
+
+    #top-padding {
+        margin-top: 200px;
+        height: 550px !important;
+    }
+}
+
+@media (max-width: 1350px) {
+    /* bump phone to another line */
+    #phone-wrapper {
+        width: 100%;
+    }
+
+    #top-padding {
+        height: 350px;
+        width: 100%;
+    }
+
+    #email-wrapper {
+        margin-top: 30px !important;
+    }
+
+    #resume-wrapper {
+        right: 30px;
+    }
+}
+
+/* just normal stuff */
+
+#resume-wrapper {
+    left: 500px;
+}
+
+/* Done with card */
+
+#phone-wrapper {
+    margin: 0px 20px 20px;
+}
+
+@media (min-width: 1350px) {
+    #phone-wrapper {
+        float: right;
+    }
+}
+
+#phone-wrapper img {
+    height: 100px;
+    width: auto;
+    display: inline-block;
+}
+
+.phone {
+    background: var(--primary);
+    z-index: 10;
+    /* display: block; */
+    padding: 5px;
+    transition: all 0.25s;
+}
+
+.phone p {
+    display: inline-block;
+    vertical-align: top;
+    font-family: var(--p-font-family);
+    margin-top: 35px;
+    font-size: 1.5em;
+    margin-bottom: auto;
+    color: white;
+}
+
+#add-to-contacts {
+    display: block;
+    margin-top: 15px;
+}
+
+/* email */
+#email-wrapper {
+    display: block;
+    margin: 380px 0 0 0;
+}
+
+#email-content {
+    margin: 20px;
+}
+
+#email-to {
+    font-family: var(--p-font-family);
+    font-weight: 400;
+    float: right; 
+    font-size: 1.2em;
+    margin: 12px 15px;
+}
+
+#email-to a {
+    color: black;
+    margin-bottom: 2px;
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=email], select, textarea {
+    width: 100%; 
+    padding: 12px;  
+    font-family: var(--p-font-family);
+    font-size: 1em;
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
+    resize: vertical;
+    transition: all 0.25s;
+}
+
+input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus {
+    outline: none !important;
+    border:3px solid var(--secondary);
+    /* box-shadow: 0 0 10px #719ECE; */
+    transition: all 0.25s;
+}
+
+input[type=submit] {
+  background-color: var(--primary);
+  color: white;
+  font-family: var(--p-font-family);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  /* border-radius: 5px; */
+  background: white;
+  color: black;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+.submission-status {
+    background: white;
+    padding: 5px;
+    font-size: 15pt;
+    margin-bottom: 10px;
+}
+
+.submit-confirmation {
+    color: green;
+}
+
+.submit-denial {
+    color: red;
+}
+
