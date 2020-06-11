@@ -52,16 +52,6 @@ def page_not_found(e):
 def server_error(e):
     return render_template("server-error.html"), 500
 
-@app.route("/copy-resume", methods=['GET'])
-def copy_resume(): 
-    pyperclip.copy(request.host_url + "resume")
-    return "Success"
-
-@app.route("/copy-card", methods=['GET'])
-def copy_card(): 
-    pyperclip.copy(request.host_url + "static/src/business-card.pdf")
-    return "Success"
-
 
 if __name__ == "__main__":
     app.run(debug=False)

@@ -1,22 +1,12 @@
 
 function copyResume() {
-    $.ajax({
-        url:'/copy-resume',
-        type:'get',
-        success:function(){
-            $("#resume-copy").html("<p class='active doc-action'>Copied!</p>")
-        }
-    });
+    copy_url("/resume")
+    $("#resume-copy").html("<p class='active doc-action'>Copied!</p>")
 }
 
 function copyCard() {
-    $.ajax({
-        url:'/copy-card',
-        type:'get',
-        success:function(){
-            $("#card-copy").html("<p class='active doc-action'>Copied!</p>")
-        }
-    });
+    copy_url("/static/src/business")
+    $("#card-copy").html("<p class='active doc-action'>Copied!</p>")
 }
 
 

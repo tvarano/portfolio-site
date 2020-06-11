@@ -91,3 +91,25 @@ function deactivateMobileNav() {
     $("#mobile-nav")[0].classList.remove("active")
     mobileNavActive = false
 }
+
+function copy_url(suffix) {
+    copy(get_hostname(document.URL) + suffix)
+}
+
+function get_hostname(url) {
+    var m = url.match(/^http:\/\/[^/]+/);
+    return m ? m[0] : null;
+}
+
+function copy(str) {
+    const el = document.createElement('textarea');
+    el.value = str;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+    el.select();
+    el.setSelectionRange(0, 99999);
+    document.execCommand('copy');
+    document.body.removeChild(el);
+}
