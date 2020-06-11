@@ -1,24 +1,22 @@
 
 function copyResume() {
-    copy("http://" + document.URL.split('/')[2] + '/resume');
-    $("#res-copy")[0].innerHTML="<p class='active doc-action'>Copied!</p>"
-}
-
-function copy(str) {
-    const el = document.createElement('textarea');
-    el.value = str;
-    el.setAttribute('readonly', '');
-    el.style.position = 'absolute';
-    el.style.left = '-9999px';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    document.body.removeChild(el);
+    $.ajax({
+        url:'/copy-resume',
+        type:'get',
+        success:function(){
+            $("#resume-copy").html("<p class='active doc-action'>Copied!</p>")
+        }
+    });
 }
 
 function copyCard() {
-    copy("http://" + document.URL.split('/')[2] + '/static/src/business-card.pdf')
-    $("#card-copy")[0].innerHTML="<p class='active doc-action'>Copied!</p>"
+    $.ajax({
+        url:'/copy-card',
+        type:'get',
+        success:function(){
+            $("#card-copy").html("<p class='active doc-action'>Copied!</p>")
+        }
+    });
 }
 
 
@@ -74,7 +72,7 @@ $(function() {
     
 } else close all
 */
-        console.log($(e.target).parents("button").prevObject[0].classList.contains("doc-action"))
+        // console.log($(e.target).parents("button").prevObject[0].classList.contains("doc-action"))
         if (e.target.classList.contains("doc") || $(e.target).parents(".doc").length) {
     
     
@@ -85,7 +83,6 @@ $(function() {
                 openDoc(target)
         } else {
             if (!($(e.target).parents("button").prevObject[0].classList.contains(".doc-action"))) {
-                console.log("DONE.")
                 closeDocs()
             }
         }

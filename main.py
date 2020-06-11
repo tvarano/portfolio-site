@@ -1,7 +1,8 @@
 from __future__ import print_function
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 import os.path
 import smtplib
+import pyperclip
 from sendMail import send_mail
 
 app = Flask(__name__)
@@ -50,6 +51,17 @@ def page_not_found(e):
 @app.errorhandler(500)
 def server_error(e):
     return render_template("server-error.html"), 500
+
+@app.route("/copy-resume", methods=['GET'])
+def copy_resume(): 
+    pyperclip.copy(request.host_url + "resume")
+    return "Success"
+
+@app.route("/copy-card", methods=['GET'])
+def copy_card(): 
+    pyperclip.copy(request.host_url + "static/src/business-card.pdf")
+    return "Success"
+
 
 if __name__ == "__main__":
     app.run(debug=False)

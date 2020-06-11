@@ -13,9 +13,13 @@ function printResume() {
 }
 
 function copyResume() {
-    $("#copy-url-holder").attr("value", "http://" + document.URL.split('/')[2] + '/resume')
-    var copyText = document.getElementById("copy-url-holder");
-    copyText.select();
-    document.execCommand("copy");
-    copyText.blur()
+    $.ajax({
+        url:'/copy-resume',
+        type:'get',
+        success:function(){
+            $("#copy-button").html("Copied!").focusout(function() {
+                this.innerHTML = "Copy Link";
+            });
+        }
+    });
 }
