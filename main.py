@@ -1,8 +1,7 @@
 from __future__ import print_function
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request
 import os.path
 import smtplib
-import pyperclip
 from sendMail import send_mail
 
 app = Flask(__name__)
@@ -22,8 +21,10 @@ def contact():
             return render_template("contact.html", submit = "denied")
         try:
             send_mail(form)
-        except: 
-            print("EMAIL SEND FAILED")
+        except Exception as inst: 
+            print(type(inst))    # the exception instance
+            print(inst.args)     # arguments stored in .args
+            print(inst)          # __str__ allows args to be printed directly,
             return render_template("contact.html", submit = "denied")
 
         # after sending, (assuming it's successful), return to the normal page with success message

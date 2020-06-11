@@ -5,10 +5,9 @@ function copyResume() {
 }
 
 function copyCard() {
-    copy_url("/static/src/business")
+    copy_url("/static/src/business-card.png")
     $("#card-copy").html("<p class='active doc-action'>Copied!</p>")
 }
-
 
 function openDoc(target) {
     target.classList.add("active")
@@ -56,16 +55,13 @@ $(function() {
     $("body").click(function(e) {
         // console.log(e.target)
 
-/* if its a doc, or if its parent is a doc {
-    if (it is open) close it
-    else if it is closed open it
-    
-} else close all
+/*  if its a doc, or if its parent is a doc {
+        if (it is open) close it
+        else if closed open it
+    } else close all
 */
         // console.log($(e.target).parents("button").prevObject[0].classList.contains("doc-action"))
         if (e.target.classList.contains("doc") || $(e.target).parents(".doc").length) {
-    
-    
             var target = (e.target.classList.contains("doc") ? e.target : $(e.target).parents(".doc")[0])
             if (target.classList.contains("active"))
                 closeDoc(target)
