@@ -45,6 +45,10 @@ def test():
 def about():
     return render_template("about.html")
 
+@app.route("/socials")
+def insta(): 
+    return render_template("socials.html")
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template("not-found.html"), 404

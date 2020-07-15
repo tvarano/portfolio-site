@@ -56,10 +56,12 @@ if (useMob) {
 
 // set active nav button
 var page = window.location.pathname.split("/").pop();
-var activeDesktopClassList = $("#" + page + "-bundle")[0].classList
-activeDesktopClassList.add("active")
-activeDesktopClassList.remove("hvr-underline-from-left")
-$("#" + page + "-mobile-nav")[0].classList.add("active")
+if ($("#" + page + "-bundle")[0]) {
+    var activeDesktopClassList = $("#" + page + "-bundle")[0].classList
+    activeDesktopClassList.add("active")
+    activeDesktopClassList.remove("hvr-underline-from-left")
+    $("#" + page + "-mobile-nav")[0].classList.add("active")
+}
 
 document.body.onscroll = function() {
     if ($(window).scrollTop() == 0)

@@ -1,0 +1,55 @@
+.content {
+    min-height: calc(100% - 70px);
+}
+
+.social-btn {
+    display: block;
+    width: 70%;
+    margin: 10px auto 10px auto;
+    text-align: left;
+    font-weight: 300;
+    font-family: var(--h-font-family);
+}
+
+.social-h {
+    padding-left: 10%;
+    font-family: var(--h-font-family);
+    font-weight: 300;
+    font-size: 2em;
+}
+
+.socialicon {
+    fill: white;
+    display: inline;
+    padding-right: 10px;
+}
+
+.social-btn.insta {
+    background-color: #E1306C;
+}
+
+.social-btn.snap {
+    background-color: #FFFC00;
+    color: black;
+    fill: black;
+}
+
+.social-btn.spotify {
+    background-color: #1DB954;
+}
+
+.social-btn.lastfm {
+    background-color: #D51007;
+}
+
+.social-btn.facebook {
+    background-color: #4267B2;
+}
+
+.social-btn.github {
+    background-color: black;
+}
+
+.social-btn.linkedin {
+    background-color: #0e76a8;
+}
