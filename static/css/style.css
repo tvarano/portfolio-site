@@ -440,13 +440,21 @@ to align it properly */
 }
 
 .page-title {
-    background: var(--primary);
+    /* background: var(--primary); */
+    padding-top: 20px;
     padding-left: 40px;
     width: calc(100% - 40px);
 }
 
+.page-title hr {
+    color: var(--primary);
+    width: calc(100% - 80px);
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
 .page-title h1 {
-    color: white;
+    color: var(--primary);
     font-family: var(--h-font-family);
     font-weight: 550;
     font-size: 4em;
@@ -454,18 +462,24 @@ to align it properly */
 }
 
 .section-title {
-    background: var(--primary);
+    /* background: var(--primary); */
     padding: 10px 0px 10px 40px;
     width: calc(100% - 40px);
-    /* box-shadow: 0 2px 5px black; */
 }
 
 .section-title h1 {
-    color: white;
+    color: var(--primary);
     font-family: var(--h-font-family);
-    font-weight: 300;
+    font-weight: 550;
     font-size: 3em;
     margin: 0px; 
+}
+
+.section-title hr {
+    color: var(--primary);
+    width: calc(100% - 80px);
+    margin-left: 0;
+    margin-bottom: 20px;
 }
 
 section {
