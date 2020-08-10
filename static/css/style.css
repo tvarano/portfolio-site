@@ -479,7 +479,7 @@ to align it properly */
     color: var(--primary);
     width: calc(100% - 80px);
     margin-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 section {
@@ -524,6 +524,10 @@ main button {
     .section-title, .page-title {
         padding-left: 10px !important;
         width: calc(100% - 10px) !important;
+    }
+    
+    .section-title hr, .page-title hr {
+        width: calc(100% - 20px) !important;
     }
 }
 
