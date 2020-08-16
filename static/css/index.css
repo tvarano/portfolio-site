@@ -14,12 +14,10 @@ html {
   font-size: 15vw;
     font-weight: 300;
     margin: 0px;
-    /* z-index: -1; */
     text-align: center;
   }
   
   #main-content {
-    /* background-color: var(--secondary); */
     height: calc(100vh - var(--header-height));
 }
 
@@ -94,9 +92,7 @@ html {
 }
 
 .quick-links-margin {
-  /* display: inline-block; */
   display: none;
-  /* width: calc((65vw - 380px) / 3); */
   height: 10px;
 }
 
@@ -137,13 +133,8 @@ html {
   margin-right: 0px;
 } 
 
-/* #quick-links .linkedin, #quick-links .github {
-  float: right;
-} */
-
 @media (max-width: 600px) {
     .quick-links-margin {
-        /* width: calc((65vw - 190) / 2) !important; */
         width: 0px;
     } 
 }
