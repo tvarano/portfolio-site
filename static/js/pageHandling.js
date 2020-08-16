@@ -1,40 +1,34 @@
-// DETECT IF DEVICE IS MOBILE
 
-var isMob = false;
-var useMob = screen.width < 850
+var isMobSize = (screen.width < 850)
+
+/* notify if on ie to use other browser :/ */
+var ua = window.navigator.userAgent;
+var msie = ua.indexOf("MSIE ");
+
+if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))
+    alert("You are viewing this site using Internet Explorer. This site uses CSS3 variables, and works much better in other browsers. Thank you for understanding.")
 
 
-function is_touch_device() {
-    var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
-    var mq = function(query) {
-        return window.matchMedia(query).matches;
-    }
+function is_touch_enabled() { 
+    return ( 'ontouchstart' in window ) ||  
+    ( navigator.maxTouchPoints > 0 ) ||  
+    ( navigator.msMaxTouchPoints > 0 ); 
+} 
 
-    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-        return true;
-    }
-
-    // include the 'heartz' as a way to have a non matching MQ to help terminate the join
-    // https://git.io/vznFH
-    var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
-    return mq(query);
-}
-isMob = is_touch_device()
-
-if (isMob) {
+if (!isMobSize) {
+    $("#mobile-nav").hide()
+} else if (is_touch_enabled()) {
+    /* if the screeen is around phone size and there is no touch screen, 
+    get rid of scrollbars */
+    
     $(".scrollable").each(function() {
         this.classList.add("no-scroll")
     })
-    // var list = $(".scrollable")
-    // for (var i = 0; i < list.length; i++) {
-    //     list[i].classList.add("no-scroll");
-    // }
-    // document.body.scroll = "no";
 }
 
 $("#logo-wrapper" ).click(function() {
     // if on desktop, go to home. 
-    if (useMob) {
+    if (isMobSize) {
         if (mobileNavActive)
             deactivateMobileNav()
         else
@@ -44,9 +38,10 @@ $("#logo-wrapper" ).click(function() {
     }
 });
 
+
 // FULL SETUP OF DESKTOP NAV
 var minWidth = 700
-if (useMob) {
+if (isMobSize) {
     document.getElementById("desktop-nav").classList.add("hidden")
     activateMobileNav()
     setTimeout(deactivateMobileNav, 1500)
