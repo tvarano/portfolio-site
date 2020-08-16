@@ -23,7 +23,6 @@
     height: 258px;
     margin-left: 40px;
     cursor: pointer;
-    /* border-width: 0px; */
     transition: all 0.5s;
 }
 
@@ -69,13 +68,11 @@
 
 .doc .button-holder {
     display: inline-block;
-    /* width: 48%; */
     width: 0px;
     top: 0px;
     background: var(--primary);
     transition: width 0.25s;
     vertical-align: top;
-    /* background: pink; */
 }
 
 .doc .button-holder.active {
@@ -144,7 +141,6 @@
     }
 
     #top-padding {
-        /* marign-top: 550px !important; */
         margin-top: 0px !important;
     }
 }
@@ -234,7 +230,6 @@
 .phone {
     background: var(--primary);
     z-index: 10;
-    /* display: block; */
     padding: 5px;
     transition: all 0.25s;
 }
@@ -295,7 +290,6 @@ input[type=text], input[type=email], select, textarea {
 input[type=text]:focus, input[type=email]:focus, select:focus, textarea:focus {
     outline: none !important;
     border:3px solid var(--secondary);
-    /* box-shadow: 0 0 10px #719ECE; */
     transition: all 0.25s;
 }
 
@@ -310,7 +304,6 @@ input[type=submit] {
 
 /* Add a background color and some padding around the form */
 .container {
-  /* border-radius: 5px; */
   background: white;
   color: black;
   padding: 10px;

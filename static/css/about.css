@@ -64,7 +64,6 @@ aside {
 }
 
 .list-svg-wrapper svg {
-    /* display: inline-block; */
     float: left;
     padding: 2px;
     vertical-align: middle;
@@ -75,7 +74,6 @@ aside {
 }
 
 .list-svg-wrapper p {
-    /* padding-left: 10px; */
     margin-top: 7px;
     margin-bottom: 0px;
 }
@@ -84,7 +82,6 @@ aside {
     display: inline-block;
     width: 150px;
     border: 1px solid gray;
-    /* background: var(--darkgray); */
     margin-bottom: 10px;
     margin-right: 10px;
     padding: 2px;
@@ -164,7 +161,6 @@ aside {
 }
 
 .project-text h4 {
-    /* margin-bottom: 5px; */
     font-size: 1.4em;
     font-family: var(--h-font-family);
     padding: 5px;
@@ -184,7 +180,6 @@ aside {
 
 .project-wrapper ul li {
     display: inline-block;
-    /* background: gray; */
     padding: 5px 10px 5px 10px;
     margin-right: 5px;
     font-family: var(--p-font-family);
@@ -209,7 +204,6 @@ aside {
 }
 
 .java-tool:hover {
-    /* box-shadow: 0 0 10px #EA2D2E; */
     background: #EA2D2E;
 }
 
@@ -227,8 +221,7 @@ aside {
 
 .html-tool:hover {
     background: rgb(228,77,38);
-background: linear-gradient(100deg, rgba(228,77,38,1) 50%, rgba(38,77,228,1) 70%);
-    /* 264de4 */
+    background: linear-gradient(100deg, rgba(228,77,38,1) 50%, rgba(38,77,228,1) 70%);
 }
 
 .c-tool:hover {

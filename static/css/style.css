@@ -1,18 +1,12 @@
 :root {
     --purp: #42235d; /*66, 35, 93 */
     --teal: #5dcaca; /*93, 202,202 */
-    /* pink: FF6978 */
-    /* papaya: F98E1D */
+    /* pink: #FF6978 */
+    /* papaya: #F98E1D; */
     
     --primary: #14213D;
     --secondary: #FF6978;
     --tertiary: #FF6978;
-
-    /* --color1: rgba(163, 147, 191, 1); */
-    /* --color2: rgba(152, 130, 172, 1); */
-    /* --color3: rgba(115, 100, 138, 1); */
-    --color4: rgba(69, 55, 80, 1);
-    --color5: rgba(12, 9, 16, 1);
 
     --header-height: 70px;
 
@@ -20,7 +14,6 @@
 
     --h-font-family: 'Work Sans', sans-serif;
     --p-font-family: 'Roboto', sans-serif;
-
 }
 
 body {
@@ -121,7 +114,6 @@ nav button {
 }
 
 .nav-bundle.active {
-    /* box-shadow: 0px 4px var(--primary); */
     border-bottom: 4px solid var(--primary);
     transform: translateY(5px);
 }
@@ -131,15 +123,12 @@ nav button {
 }
 
 #desktop-nav .nav-bundle.active button {
-    /* color: var(--primary); */
     padding-bottom: 1px !important;
 }
 
 .nav-button-highlight {
     position: absolute;
     top: 0px;
-    /* left: 0px; */
-    /* width: 10px; */
     height: 5px;
     background: var(--tertiary);
     opacity: 0;
@@ -148,7 +137,6 @@ nav button {
 
 #mobile-nav.active {
     top: var(--header-height);
-    /* z-index: 1; */
     transition: all 1s;
 }
 
@@ -192,8 +180,6 @@ nav button {
 #main-footer div {
     padding: 0 20px 0 20px;
 }
-
-
 
 #main-footer p {
     color: gray;
@@ -278,7 +264,6 @@ to align it properly */
 /*facebook*/
 
 #media-wrapper ul li:hover.facebook {
-    /* border: 1px solid #3b5998; */
     box-shadow: 0 0 10px #3b5998;
 }
 
@@ -291,7 +276,6 @@ to align it properly */
 /*twitter*/
 
 #media-wrapper ul li:hover.twitter {
-    /* border: 1px solid #00aced; */
     box-shadow: 0 0 15px #00aced;
     transition: all 0.5s ease;
 }
@@ -304,7 +288,6 @@ to align it properly */
 
 /* instagram */
 #media-wrapper ul li:hover.instagram {
-    /* border: 1px solid #bc2a8d; */
     box-shadow: 0 0 15px #bc2a8d;
     transition: all 0.5s ease;
 }
@@ -318,7 +301,6 @@ to align it properly */
 /* snapchat */
 
 #media-wrapper ul li:hover.snapchat {
-    /* border: 1px solid #fffc00; */
     box-shadow: 0 0 15px #fffc00;
     transition: all 0.5s ease;
 }
@@ -331,7 +313,6 @@ to align it properly */
 
 /* google */
 #media-wrapper ul li:hover.google {
-    /* border: 1px solid #dd4b39; */
     box-shadow: 0 0 15px #dd4b39;
     transition: all 0.5s ease;
 }
@@ -344,7 +325,6 @@ to align it properly */
 
 /* github */
 #media-wrapper ul li:hover.github {
-    /* border: 1px solid black; */
     box-shadow: 0 0 15px black;
     transition: all 0.5s ease;
 }
@@ -357,7 +337,6 @@ to align it properly */
 
 /* linkedin */
 #media-wrapper ul li:hover.linkedin {
-    /* border: 1px solid #0077b5; */
     box-shadow: 0 0 15px #0077b5;
     transition: all 0.5s ease;
 }
@@ -370,7 +349,6 @@ to align it properly */
 
 /* spotify */
 #media-wrapper ul li:hover.spotify {
-    /* border: 1px solid #1db954; */
     box-shadow: 0 0 15px #1db954;
     transition: all 0.5s ease;
 }
@@ -383,7 +361,6 @@ to align it properly */
 
 /* lastfm */
 #media-wrapper ul li:hover.lastfm {
-    /* border: 1px solid #d51007; */
     box-shadow: 0 0 15px #d51007;
     transition: all 0.5s ease;
 }
@@ -396,7 +373,6 @@ to align it properly */
 
 /* steam */
 #media-wrapper ul li:hover.steam {
-    /* border: 1px solid #00adee; */
     box-shadow: 0 0 15px #00adee;
     transition: all 0.5s ease;
 }
@@ -409,7 +385,6 @@ to align it properly */
 
 /* reddit */
 #media-wrapper ul li:hover.reddit {
-    /* border: 1px solid #ff4500; */
     box-shadow: 0 0 15px #ff4500;
     transition: all 0.5s ease;
 }
@@ -431,11 +406,9 @@ to align it properly */
     width: 100%;
     min-height: calc(100vh - var(--header-height));
     color: black;
-    /* background: var(--background); */
 }
 
 .page-title {
-    /* background: var(--primary); */
     padding-top: 20px;
     padding-left: 40px;
     width: calc(100% - 40px);
@@ -457,7 +430,6 @@ to align it properly */
 }
 
 .section-title {
-    /* background: var(--primary); */
     padding: 10px 0px 10px 40px;
     width: calc(100% - 40px);
 }
@@ -492,7 +464,6 @@ article {
 
 a {
     text-decoration: none;
-    /* color: white; */
     color: var(--secondary);
 }
 
