@@ -33,6 +33,7 @@ def send_mail(form):
             creds = flow.run_local_server()
         # Save the credentials for the next run
         with open('token.pickle', 'wb') as token:
+            print("python: pickle updating")
             pickle.dump(creds, token)
 
     service = build('gmail', 'v1', credentials=creds)
