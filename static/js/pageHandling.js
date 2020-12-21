@@ -46,7 +46,7 @@ if (isMobSize) {
     activateMobileNav()
     setTimeout(deactivateMobileNav, 1500)
 } else {
-   document.getElementById("desktop-nav").style.left = document.getElementById("logo-wrapper").getBoundingClientRect().right + 100 + "px"
+//    document.getElementById("desktop-nav").style.left = document.getElementById("logo-wrapper").getBoundingClientRect().right + 100 + "px"
 }
 
 // set active nav button

@@ -7,14 +7,41 @@ html {
   background: transparent;
 }
 
+#face-and-name {
+  display: block;
+  /* height: 250px; */
+  margin-bottom: 40px;
+}
+
+#my-face {
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  float: left;
+  border-radius: 100px;
+  display: table-cell;
+  border: 5px solid var(--secondary);
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+#my-face img {
+  width: 300px;
+  margin: -20px 0 0 -20px;
+}
+
+#name-intro {
+  display: table-cell;
+}
 
 #index-name {
   font-family: var(--h-font-family);
   color: var(--secondary);
-  font-size: 15vw;
+  font-size: 7vw;
     font-weight: 300;
     margin: 0px;
-    text-align: center;
+    text-align: left;
   }
   
   #main-content {
@@ -27,11 +54,13 @@ html {
 }
 
 #intro {
-    text-align: center;
-    font-family: var(--p-font-family);
-    color: var(--secondary);
-    font-weight: 300;
-    font-size: 2vw;
+  margin-left: 5%;
+  margin-top: 0; margin-bottom: 0;
+  text-align: left;
+  font-family: var(--p-font-family);
+  color: var(--secondary);
+  font-weight: 300;
+  font-size: 2vw;
 }
 
 @media (max-width: 700px) {
@@ -45,7 +74,7 @@ html {
 }
 
 /* if less than 1100, make text big and uncenter */
-
+/* 
 @media screen and (orientation: portrait) {
   #index-name {
     font-size: 20vw;
@@ -55,35 +84,19 @@ html {
   #intro {
     font-size: 4.5vw;
   }
-}
+} */
 
 #quick-links-wrap {
   padding: 10px;
-  margin-top: 60px;
-  background-color: var(--primary);   
+  /* margin-top: 60px; */
+  /* background-color: var(--primary);    */
 }
 
 #quick-links {
   font-size: 0px;
-  width: 75vw;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+  /* max-width: 500px; */
   white-space: normal;
   transition: all 0.5s;
-}
-
-.link-group {
-  width: 50%;
-  display: inline-block;
-}
-
-#links-left {
-  text-align: right;
-}
-
-#links-right {
-  float: right;
 }
 
 #quick-links svg {
@@ -103,11 +116,11 @@ html {
 
 .quick-link {
   padding: 2%;
-  width: 40%;
-  height: 40%;
-  margin-left: 2%;
-  margin-right: 2%;
-  fill: var(--secondary);
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  fill: var(--primary);
   display: inline-block;
   transition: all 0.5s;
 
@@ -137,4 +150,45 @@ html {
     .quick-links-margin {
         width: 0px;
     } 
+}
+
+#bio {
+  display: table-cell;
+  padding-top: 15px;
+  padding-left: 20px;
+  font-weight: 300;
+}
+
+#top-sect {
+  min-height: 220px;
+}
+
+aside {
+  padding-top: 20px;
+}
+
+@media (max-width: 650px) {
+  #my-face {
+      margin-top: 50px;
+  }
+}
+
+@media (max-width:500px) {
+
+  #bio {
+      padding-left: 10px;
+      display: block;
+  }
+
+  #my-face {
+      display: block;
+      margin: 0px auto 0px auto;
+      float: none !important;
+  }
+}
+
+@media (max-width: 320px) {
+  #bio {
+      top: 400px;
+  }
 }

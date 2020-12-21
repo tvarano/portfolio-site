@@ -1,0 +1,169 @@
+/* langs and toolss */
+
+.icon-list {
+    padding: 0;
+}
+
+.icon-list li {
+    list-style: none;
+}
+
+.list-svg-wrapper svg {
+    float: left;
+    padding: 2px;
+    vertical-align: middle;
+    border-radius: 5px; 
+    width: 50px; height: 50px;
+    background: white;
+    margin-right: 5px;
+}
+
+.list-svg-wrapper p {
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+
+.list-svg-wrapper {
+    display: inline-block;
+    width: 150px;
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 2px;
+}
+
+@media (min-width: 650px) {
+    .projects-container {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+    }
+}
+
+.project-wrapper {
+    background: lightgray;
+    padding: 20px;
+    margin: 0 10px 10px 10px;
+    display: block;
+    padding-bottom: 10px;
+
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.project-wrapper img {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin: 10px;
+    margin-right: 20px;
+}
+
+.project-text {
+    vertical-align: top;
+}
+
+.project-text h4 {
+    font-size: 1.4em;
+    font-family: var(--h-font-family);
+    padding: 5px;
+    color: var(--primary);
+    margin: 5px;
+}
+
+.project-text p {
+    margin-top: 0px;
+    padding-left: 15px;
+
+}
+
+.project-wrapper ul {
+    list-style: none;
+}
+
+.project-wrapper ul li {
+    display: inline-block;
+    padding: 5px 10px 5px 10px;
+    margin-right: 5px;
+    font-family: var(--p-font-family);
+    margin-bottom: 5px;
+}
+
+/* language / tool colors */
+
+.tool {
+    color: black;
+    padding: 2px;
+    border-width: 0px;
+    border-style: solid;
+    transition: all ease 0.25s;
+    --webkit-transition: all ease 0.25s;
+}
+
+.tool:hover {
+    color: white;
+    transition: all ease 0.25s;
+    --webkit-transition: all ease 0.25s;
+}
+
+.java-tool:hover {
+    background: #EA2D2E;
+}
+
+.python-tool:hover {
+    background: #306998;
+}
+
+.js-tool:hover {
+    background: #F0DB4F;
+}
+
+.swift-tool:hover {
+    background: #FF2612;
+}
+
+.html-tool:hover {
+    background: rgb(228,77,38);
+    background: linear-gradient(100deg, rgba(228,77,38,1) 50%, rgba(38,77,228,1) 70%);
+}
+
+.c-tool:hover {
+    background: #283593;
+}
+
+.git-tool:hover {
+    background: #F34F29;
+}
+
+.oauth-tool:hover {
+    background: black;
+}
+
+.flask-tool:hover {
+    background: gray;
+}
+
+.heroku-tool:hover {
+    background: #6762a6;
+}
+
+.bash-tool:hover {
+    background: gray;
+}
+
+.jquery-tool:hover {
+    background: #0868ac;
+}
+
+.xcode-tool:hover {
+    background: #14a2e7;
+}
+
+.sqlite-tool:hover {
+    background: #69bbea;
+}
+
+.gcloud-tool:hover {
+    background: #ea4335;
+}
