@@ -6,6 +6,8 @@
 
 .icon-list li {
     list-style: none;
+    background-color: var(--primary);
+    color: white;
 }
 
 .list-svg-wrapper svg {
@@ -13,23 +15,26 @@
     padding: 2px;
     vertical-align: middle;
     border-radius: 5px; 
-    width: 50px; height: 50px;
-    background: white;
+    width: 25px; height: 25px;
+    /* background: white; */
+    fill: var(--secondary) !important;
     margin-right: 5px;
 }
 
 .list-svg-wrapper p {
     margin-top: 7px;
     margin-bottom: 0px;
+    display: inline-block;
 }
 
 .list-svg-wrapper {
     display: inline-block;
-    width: 150px;
+    /* width: 120px; */
     border: 1px solid gray;
     margin-bottom: 10px;
     margin-right: 10px;
-    padding: 2px;
+    padding: 5px !important;
+    border-radius: 2px;
 }
 
 @media (min-width: 650px) {
@@ -103,6 +108,7 @@
 
 .tool:hover {
     color: white;
+    background: var(--secondary);
     transition: all ease 0.25s;
     --webkit-transition: all ease 0.25s;
 }
@@ -146,10 +152,6 @@
 
 .heroku-tool:hover {
     background: #6762a6;
-}
-
-.bash-tool:hover {
-    background: gray;
 }
 
 .jquery-tool:hover {
