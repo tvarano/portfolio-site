@@ -65,6 +65,20 @@ document.body.onscroll = function() {
         $("#main-header")[0].classList.add("scrolled")
 };
 
+// setting up collapsing
+$(".collapsible").each(function(index) {
+    this.addEventListener("click", function() {
+        this.classList.toggle("active");
+        let myid = this.id
+        myid = myid.substring(0, myid.indexOf("-header"))
+        let cont = $("#"+myid+"-content")[0]
+        if (cont.style.maxHeight) {
+            cont.style.maxHeight = null;
+        } else {
+            cont.style.maxHeight = cont.scrollHeight + "px";
+        }
+    })
+})
 
 // go to given address from button
 function goTo(button_id) {

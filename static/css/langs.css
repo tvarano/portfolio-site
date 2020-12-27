@@ -37,14 +37,6 @@
     border-radius: 2px;
 }
 
-@media (min-width: 650px) {
-    .projects-container {
-        -webkit-column-count: 2;
-        -moz-column-count: 2;
-        column-count: 2;
-    }
-}
-
 .project-wrapper {
     background: lightgray;
     padding: 20px;

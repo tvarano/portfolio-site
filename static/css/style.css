@@ -432,6 +432,7 @@ to align it properly */
 
 .section-title h1 {
     color: var(--primary);
+    display: inline-block;
     font-family: var(--h-font-family);
     font-weight: 550;
     font-size: 3em;
@@ -450,6 +451,31 @@ section {
     margin-right: 60px;
     margin-top: 10px;
     display: block;
+}
+
+.collapsible {
+    cursor: pointer;
+}
+
+.collapsible-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.collapsible.active .collapsible-identifier {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);
+
+    transition: all 0.2s;
+}
+
+.collapsible-identifier {
+    font-size: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    transition: all 0.2s;
 }
 
 article {
