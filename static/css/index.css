@@ -73,28 +73,12 @@ html {
     }
 }
 
-/* if less than 1100, make text big and uncenter */
-/* 
-@media screen and (orientation: portrait) {
-  #index-name {
-    font-size: 20vw;
-    text-align: left;
-    margin-left: 10px;
-  }
-  #intro {
-    font-size: 4.5vw;
-  }
-} */
-
 #quick-links-wrap {
   padding: 10px;
-  /* margin-top: 60px; */
-  /* background-color: var(--primary);    */
 }
 
 #quick-links {
   font-size: 0px;
-  /* max-width: 500px; */
   white-space: normal;
   transition: all 0.5s;
 }

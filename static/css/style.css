@@ -1,6 +1,6 @@
 :root {
-    --purp: #42235d; /*66, 35, 93 */
-    --teal: #5dcaca; /*93, 202,202 */
+    /* --purp: #42235d; 66, 35, 93 */
+    /* --teal: #5dcaca; 93, 202,202 */
     /* pink: #FF6978 */
     /* papaya: #F98E1D; */
     
@@ -14,10 +14,6 @@
 
     --h-font-family: 'Work Sans', sans-serif;
     --p-font-family: 'Roboto', sans-serif;
-}
-
-html{
-    /* background: gray; */
 }
 
 body {
@@ -41,6 +37,8 @@ body {
               user-select: none;
   }
   
+/* ------------------------------- HEADER AND FOOTER ------------------------------- */
+
 /* HEADER */
 
 #main-header {
@@ -107,10 +105,6 @@ body {
 
 #desktop-nav {
     float: right;
-    /* margin-left:auto; margin-right:0; */
-    /* position: absolute;
-    top: 20px; */
-    /* margin-left: 25px; */
     margin-top: 25px;
     font-size: 0px;
 }
@@ -216,7 +210,9 @@ nav button {
     display: inline-block;
 }
 
-/* Media Buttons */
+/* ------------------------------- END HEADER AND FOOTER ------------------------------- */
+
+/* ------------------------------- Media Buttons ------------------------------- */
 
 #media-wrapper {
     padding: 0 !important;
@@ -410,7 +406,9 @@ to align it properly */
     transition: all 0.5s ease;
 }
 
-/* GENERAL CONTENT */
+/* ------------------------------- END MEDIA BUTTONS ------------------------------- */
+
+/* ------------------------------- GENERAL CONTENT ------------------------------- */
 
 #main-content {
     font-family: var(--p-font-family);
@@ -425,8 +423,6 @@ to align it properly */
 }
 
 .section-title {
-    /* padding: 10px 0px 10px 40px;
-    width: calc(100% - 40px); */
     width: 100%;
 }
 
@@ -441,7 +437,6 @@ to align it properly */
 
 .section-title hr {
     color: var(--primary);
-    /* width: calc(100% - 80px); */
     margin-left: 0;
     margin-bottom: 5px;
 }
@@ -506,7 +501,7 @@ main button {
     font-size: 1.2em;
 }
 
-/* END CONTENT */
+/* ------------------------------- END CONTENT ------------------------------- */
 
 @media (max-width: 400px) {
     .section-title, .page-title {
@@ -530,7 +525,7 @@ main button {
     }
 }
 
-/* HOVER ANIMATIONS */
+/* ------------------------------- HOVER ANIMATIONS ------------------------------- */
 
 /* Underline From Left */
 .hvr-underline-from-left {
