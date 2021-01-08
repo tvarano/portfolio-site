@@ -1,5 +1,5 @@
 
-var isMobSize = (screen.width < 850)
+var isMobSize = (screen.width < 600)
 
 /* notify if on ie to use other browser :/ */
 var ua = window.navigator.userAgent;
@@ -18,7 +18,7 @@ function is_touch_enabled() {
 if (!isMobSize) {
     $("#mobile-nav").hide()
 } else if (is_touch_enabled()) {
-    /* if the screeen is around phone size and there is no touch screen, 
+    /* if the screen is around phone size and there is no touch screen, 
     get rid of scrollbars */
     
     $(".scrollable").each(function() {

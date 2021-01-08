@@ -176,3 +176,28 @@ aside {
       top: 400px;
   }
 }
+
+
+/* ------------------------------- work, project wrappers ------------------------------- */
+
+.work-wrapper ul {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.work-wrapper p {
+  padding-right: 10px;
+  font-size: 0.9em;
+}
+
+.project-wrapper ul {
+  list-style: none;
+}
+
+.project-wrapper ul li {
+  display: inline-block;
+  padding: 5px 10px 5px 10px;
+  margin-right: 5px;
+  font-family: var(--p-font-family);
+  margin-bottom: 5px;
+}

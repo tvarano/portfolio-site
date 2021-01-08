@@ -422,6 +422,8 @@ to align it properly */
     color: black;
 }
 
+/* section styling */
+
 .section-title {
     width: 100%;
 }
@@ -448,6 +450,20 @@ section {
     display: block;
 }
 
+ul h4 {
+    font-family: var(--h-font-family);
+    font-weight: 400;
+    font-size: 1.3em;
+    margin: 0.2em 0 0.2em 0;
+}
+
+.subtitle {
+    font-family: var(--h-font-family);
+    margin: 0.2em 0 0.5em 0;
+}
+
+/* collapsing sections */
+
 .collapsible {
     cursor: pointer;
 }
@@ -473,10 +489,52 @@ section {
     transition: all 0.2s;
 }
 
+/* article styling */
+
 article {
     font-family: var(--p-font-family);
     font-size: 1.2em;
     margin: 20px 0 20px 0;
+
+    background: lightgray;
+    padding: 20px;
+    margin: 0 10px 10px 10px;
+    display: block;
+    padding-bottom: 10px;
+  
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+article img {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin: 10px;
+    margin-right: 20px;
+}
+
+.work-wrapper ul {
+    margin-top: 0;
+}
+
+article .text {
+    vertical-align: top;
+}
+
+article .text h4 {
+    font-size: 1.4em;
+    font-family: var(--h-font-family);
+    padding: 5px;
+    color: var(--primary);
+    margin: 5px;
+}
+
+article .text p {
+    margin-top: 0px;
+    padding-left: 15px;
+    display: inline-block;
 }
 
 a {
@@ -503,7 +561,16 @@ main button {
 
 /* ------------------------------- END CONTENT ------------------------------- */
 
-@media (max-width: 400px) {
+/* REAVTIVE RESIZING */
+@media (max-width: 650px) {
+    #main-header-wrap {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 450px) {
     .section-title, .page-title {
         padding-left: 10px !important;
         width: calc(100% - 10px) !important;
@@ -511,6 +578,19 @@ main button {
     
     .section-title hr, .page-title hr {
         width: calc(100% - 20px) !important;
+    }
+
+    body {
+        margin: 0;
+        width: 100%;
+    }
+    
+    #main-header {
+        margin-left: 0;
+    }
+
+    .section-title h1 {
+        font-size: 2em;
     }
 }
 
