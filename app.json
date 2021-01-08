@@ -2,7 +2,7 @@
   "name": "A Portfolio for Thomas Varano",
   "description": "A barebones Python app, which can easily be deployed to Heroku.",
   "image": "heroku/python",
-  "repository": "https://github.com/tvarano54/tvarano54.github.io",
+  "repository": "https://github.com/tvarano54/tvarano5.github.io",
   "keywords": ["python", "flask" ],
   "addons": [ ],
   "env": {

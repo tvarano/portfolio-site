@@ -3,8 +3,6 @@
 from __future__ import print_function
 from flask import Flask, render_template, request
 import os.path
-import smtplib
-from sendMail import send_mail
 
 app = Flask(__name__)
 
@@ -14,26 +12,8 @@ def home():
 
 @app.route("/contact", methods=['GET', 'POST'])
 def contact():
-    # posting email
-    if request.method == 'POST':
-        form = request.form
-        print(form['trapit'])
-        # checking for bot email and denying
-        if form['trapit'] is not None and form['trapit'] != "":
-            return render_template("contact.html", submit = "denied")
-        try:
-            send_mail(form)
-        except Exception as inst: 
-            print(type(inst))    # the exception instance
-            print(inst.args)     # arguments stored in .args
-            print(inst)          # __str__ allows args to be printed directly,
-            return render_template("contact.html", submit = "denied")
-
-        # after sending, (assuming it's successful), return to the normal page with success message
-        print("EMAIL SEND ACCEPTED")
-        return render_template("contact.html", submit = "accepted")
-    else:
-        return render_template("contact.html", submit = "none")
+    # removed page. redirect to home
+    return redirect("/", code=302)
 
 @app.route("/resume")
 def resume():
@@ -45,10 +25,11 @@ def test():
 
 @app.route("/about")
 def about():
-    return render_template("about.html")
+# removed page. redirect to home
+    return redirect("/", code=302)
 
 @app.route("/socials")
-def insta(): 
+def socials(): 
     return render_template("socials.html")
 
 @app.errorhandler(404)

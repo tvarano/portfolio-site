@@ -1,14 +1,8 @@
 
 function printResume() {
-    console.log("printing")
-    //Wait until PDF is ready to print    
-    // if (typeof document.getElementById("printable-resume").print == 'undefined') {
-    //     setTimeout(function(){printResume();}, 1000);
-    // } else {
-        var x = document.getElementById("resume-frame");
-        x.contentWindow.focus();
-        x.contentWindow.print();
-    // }
+    var x = document.getElementById("resume-frame");
+    x.contentWindow.focus();
+    x.contentWindow.print();
 }
 
 function copyResume() {
