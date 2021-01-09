@@ -45,12 +45,11 @@ body {
     position: fixed;
     top:0px;
     background-color: white;
-    /* margin: 0 2% 0 2%;  */
     width: 100vw;
     margin-left: -10%;
     height: var(--header-height);
     box-shadow: none;
-    transition: box-shadow 0.5s;
+    transition: box-shadow 0.2s;
 }
 
 #main-header-wrap {
@@ -60,7 +59,7 @@ body {
 
 #main-header.scrolled {
     box-shadow: var(--shadow);
-    transition: box-shadow 0.5s;
+    transition: box-shadow 0.2s;
 }
 
 #logo-wrapper {
@@ -92,7 +91,7 @@ body {
     height: 50px;
     width: auto;
 
-    transition: all 1s;
+    transition: all 0.4s;
 }
 
 #logo.active {
@@ -100,7 +99,7 @@ body {
     -webkit-transform: rotate(90deg); 
     transform: rotate(90deg);
 
-    transition: all 1s;
+    transition: all 0.4s;
 }
 
 #desktop-nav {
@@ -146,7 +145,7 @@ nav button {
 
 #mobile-nav.active {
     top: var(--header-height);
-    transition: all 1s;
+    transition: all 0.4s;
 }
 
 #mobile-nav {
@@ -156,7 +155,7 @@ nav button {
     left: 0;
     width: calc(100vw - 10px);
     background: rgba(255,255,255,0.9);
-    transition: all 1s;
+    transition: all 0.4s;
     padding: 5px 0px 5px 10px;
 }
 
@@ -535,6 +534,7 @@ article .text p {
     margin-top: 0px;
     padding-left: 15px;
     display: inline-block;
+    margin-bottom: 0.5em;
 }
 
 a {
