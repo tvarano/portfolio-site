@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from __future__ import print_function
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 import os.path
 
 app = Flask(__name__)
@@ -10,10 +10,12 @@ app = Flask(__name__)
 def home():
     return render_template("index.html")
 
+
+@app.route("/about")
 @app.route("/contact", methods=['GET', 'POST'])
-def contact():
+def redir():
     # removed page. redirect to home
-    return redirect("/", code=302)
+    return redirect("/")
 
 @app.route("/resume")
 def resume():
@@ -22,11 +24,6 @@ def resume():
 @app.route("/test")
 def test():
     return render_template("test.html")
-
-@app.route("/about")
-def about():
-# removed page. redirect to home
-    return redirect("/", code=302)
 
 @app.route("/socials")
 def socials(): 
