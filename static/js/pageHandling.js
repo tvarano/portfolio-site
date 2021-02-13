@@ -1,5 +1,5 @@
 
-var isMobSize = (screen.width < 600)
+var isMobSize = (screen.width < 650)
 
 /* notify if on ie to use other browser :/ */
 var ua = window.navigator.userAgent;
