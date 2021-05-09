@@ -1,27 +1,31 @@
 {% extends "layouts/layout.html" %}
 
-{% block head %}
-<link rel="stylesheet" type="text/css" href="static/css/index.css">
-<meta name="description" content="Thomas Varano, Computer Science and Mathematics student at the University of Maryland">
-{% endblock %}
-
 {% block title %}Thomas Varano{% endblock %}
 
 {% block pageName %}Home{% endblock %}
 
+{% block head %}
+<link rel="stylesheet" type="text/css" href="static/css/index.css">
+<link rel="stylesheet" type="text/css" href="static/css/langs.css">
+<meta name="description" content="Thomas Varano, Computer Science and Mathematics student at the University of Maryland">
+{% endblock %}
+
 {% block content %}
-<section id="index-wrap">
-    <h2 id="index-name">
-        Tom Varano
-    </h2>
-    <h4 id="intro">
-        A Computer Science and Mathematics student<br>
-        At the University of Maryland
-    </h4>
-    <div id="quick-links-wrap">
-        <nav id="quick-links">
-            <div id="links-left" class="link-group">
-                <a href="/contact#email" target=_blank>
+<section id="face-and-name">
+    <div id="my-face">
+        <img src="static/src/profme.jpg">
+    </div>
+    <div id="name-intro">
+        <h2 id="index-name">
+            Tom Varano
+        </h2>
+        <h4 id="intro">
+            A Computer Science and Math student<br>
+            At the University of Maryland
+        </h4>
+        <div id="quick-links-wrap">
+            <nav id="quick-links">
+                <a href="/contact#email">
                     <div class="quick-link hvr-sweep-to-right email">
                         <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 511.6 511.6">
                             <path d="M498.2 68.2c-8.9-8.9-19.7-13.4-32.3-13.4H45.7c-12.6 0-23.3 4.5-32.3 13.4C4.5 77.2 0 87.9 0 100.5v310.6c0 12.6 4.5 23.3 13.4 32.3 8.9 9 19.7 13.4 32.3 13.4h420.3c12.6 0 23.3-4.5 32.3-13.4 8.9-8.9 13.4-19.7 13.4-32.3V100.5C511.6 87.9 507.2 77.2 498.2 68.2zM475.1 411.1c0 2.5-0.9 4.6-2.7 6.4 -1.8 1.8-3.9 2.7-6.4 2.7H45.7c-2.5 0-4.6-0.9-6.4-2.7 -1.8-1.8-2.7-3.9-2.7-6.4V191.9c6.1 6.9 12.7 13.1 19.7 18.8 51 39.2 91.6 71.4 121.6 96.5 9.7 8.2 17.6 14.6 23.7 19.1 6.1 4.6 14.3 9.2 24.7 13.8 10.4 4.7 20.1 7 29.3 7h0.3 0.3c9.1 0 18.9-2.3 29.3-7 10.4-4.7 18.6-9.3 24.7-13.8 6.1-4.6 14-10.9 23.7-19.1 30.1-25.1 70.6-57.3 121.6-96.5 7-5.7 13.6-12 19.7-18.8V411.1L475.1 411.1zM475.1 107.9v3.1c0 11.2-4.4 23.7-13.3 37.5 -8.9 13.8-18.4 24.8-28.7 33 -36.7 28.9-74.9 59.1-114.5 90.5 -1.1 1-4.5 3.8-10 8.4 -5.5 4.7-9.9 8.2-13.1 10.7 -3.2 2.5-7.5 5.5-12.7 9 -5.2 3.5-10 6.1-14.4 7.9 -4.4 1.7-8.5 2.6-12.3 2.6h-0.3 -0.3c-3.8 0-7.9-0.9-12.3-2.6 -4.4-1.7-9.2-4.3-14.4-7.9 -5.2-3.5-9.5-6.5-12.7-9 -3.2-2.5-7.6-6-13.1-10.7 -5.5-4.7-8.9-7.5-10-8.4 -39.6-31.4-77.7-61.6-114.5-90.5 -28-22.1-42-49.1-42-81.1 0-2.5 0.9-4.6 2.7-6.4 1.8-1.8 3.9-2.7 6.4-2.7h420.3c1.5 0.9 2.9 1.1 4 0.7 1.1-0.4 2 0.3 2.6 2.1 0.6 1.8 1.1 2.7 1.6 2.6 0.5-0.1 0.8 1.1 0.9 3.6 0.1 2.5 0.1 3.7 0.1 3.7V107.9L475.1 107.9z"></path>
@@ -29,7 +33,7 @@
                     </div>
                 </a>
                 <div class="quick-links-margin"></div>
-                <a href="https://github.com/tvarano/" target=_blank>
+                <a href="https://github.com/tvarano">
                     <div class="quick-link hvr-sweep-to-right github">
                         <svg xmlns="http://www.w3.org/2000/svg" width="439" height="439" viewBox="0 0 438.5 438.5">
                             <path d="M158.2 352.6c-3 0.6-4.4 2-4 4.3 0.4 2.3 2.1 3 5.1 2.3 3-0.8 4.4-2.1 4-4C162.9 353.1 161.2 352.2 158.2 352.6z"></path>
@@ -41,10 +45,8 @@
                         </svg>
                     </div>
                 </a>
-            </div>
-            <div id="links-right" class="link-group">
-                <div class="quick-links-margin"></div>
-                <a href="/resume" target=_blank>
+            <div class="quick-links-margin"></div>
+                <a href="/resume">
                     <div class="quick-link hvr-sweep-to-right resume">
                         <svg xmlns="http://www.w3.org/2000/svg" width="439" height="439" viewBox="0 0 438.5 438.5">
                             <path d="M246.7 182.7c-7.6 0-14.1-2.7-19.4-8 -5.3-5.3-8-11.8-8-19.4V0H64C56.3 0 49.9 2.7 44.5 8c-5.3 5.3-8 11.8-8 19.4v383.7c0 7.6 2.7 14.1 8 19.4 5.3 5.3 11.8 8 19.4 8h310.6c7.6 0 14.1-2.7 19.4-8 5.3-5.3 8-11.8 8-19.4V182.7H246.7zM328.9 356.3c0 2.7-0.9 4.9-2.6 6.6s-3.9 2.6-6.6 2.6h-201c-2.7 0-4.9-0.9-6.6-2.6 -1.7-1.7-2.6-3.9-2.6-6.6v-18.3c0-2.7 0.9-4.9 2.6-6.6 1.7-1.7 3.9-2.6 6.6-2.6h201c2.7 0 4.9 0.9 6.6 2.6 1.7 1.7 2.6 3.9 2.6 6.6V356.3zM328.9 283.2c0 2.7-0.9 4.9-2.6 6.6 -1.7 1.7-3.9 2.6-6.6 2.6h-201c-2.7 0-4.9-0.9-6.6-2.6 -1.7-1.7-2.6-3.9-2.6-6.6v-18.3c0-2.7 0.9-4.9 2.6-6.6 1.7-1.7 3.9-2.6 6.6-2.6h201c2.7 0 4.9 0.9 6.6 2.6s2.6 3.9 2.6 6.6V283.2z"></path>
@@ -53,15 +55,483 @@
                     </div>	
                 </a>
                 <div class="quick-links-margin"></div>
-                <a href="https://www.linkedin.com/in/thomas-varano" target=_blank>
+                <a href="https://www.linkedin.com/in/thomas-varano">
                     <div class="quick-link hvr-sweep-to-right linkedin">
                         <svg xmlns="http://www.w3.org/2000/svg" width="430" height="430" viewBox="0 0 430.1 430.1">
                             <path d="M430.1 261.5V420.6h-92.2V272.2c0-37.3-13.3-62.7-46.7-62.7 -25.5 0-40.6 17.1-47.3 33.7 -2.4 5.9-3.1 14.2-3.1 22.5V420.6h-92.2c0 0 1.2-251.3 0-277.3h92.2v39.3c-0.2 0.3-0.4 0.6-0.6 0.9h0.6v-0.9c12.3-18.9 34.1-45.8 83.1-45.8C384.6 136.7 430.1 176.4 430.1 261.5zM52.2 9.6C20.6 9.6 0 30.3 0 57.5c0 26.6 20 47.9 51 47.9h0.6c32.2 0 52.2-21.3 52.2-47.9C103.1 30.3 83.7 9.6 52.2 9.6zM5.5 420.6h92.2v-277.3H5.5V420.6z"></path>
                         </svg>
                     </div>
                 </a>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </div>
+</section>
+<section id="top-sect">
+
+    <div id="bio">
+        <p style="margin-top: 0px;">
+            I am a sophomore at the University of Maryland studying in the 
+            College of Computer, Mathematical, and Natural Sciences, 
+            pursuing a degree in Computer Science, minoring in Math. I will be achieving my BS in Computer Science in 2022. I have interests towards systems programming,
+             backend web development, and information processing.
+            I have knowledge and experience in several programming languages and frameworks, as shown below.
+            
+            I have many interests aside from computer science, including physics and engineering, 
+            but also comprising of music production, track and field, and autosports. I am also a member of Sigma Phi Delta, an engineering fraternity.</p>
+        <p> This website is/was my first venture into web development, made from scratch using HTML/CSS/jQuery and developed full-stack with Python Flask.</p>
+        <p>Feel free to reach out by email at <a href="mailto:thvarano@gmail.com">thvarano@gmail.com</a> or on one of my <a href="/socials">socials</a>.</p>
+
+    </div>
+</section>
+<section id="skills">
+    <header id="skills-header" class="section-title collapsible noselect">
+        <h1>Skills   <span class="collapsible-identifier">&#x27A4;</span></h1>
+        <hr>
+    </header>
+    <div id="skills-content" class="collapsible-content">
+        <h3 class="subtitle">Most Proficient Languages</h3>
+        <ul class="icon-list">
+            <!-- Java -->
+            <li class="list-svg-wrapper tool java-tool">
+                <svg viewBox="0 0 128 128">
+                    <path d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zM44.629 84.455s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"></path>
+                    <path d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z"></path>
+                    <path d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zM90.609 93.041c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z"></path>
+                    <path d="M76.491 1.587s12.968 12.976-12.303 32.923c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815 8.548-12.834 32.229-19.059 26.998-39.667z"></path>
+                    <path d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z"></path>
+                </svg> 
+                <p class="tool-name">Java</p>
+            </li>
+            <!-- Python -->
+            <li class="list-svg-wrapper tool python-tool">
+                    <svg width="256px" height="255px" viewBox="0 0 256 255" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+                        <defs>
+                            <linearGradient x1="12.9593594%" y1="12.0393928%" x2="79.6388325%" y2="78.2008538%" id="linearGradient-1">
+                                <stop stop-color="#387EB8" offset="0%"></stop>
+                                <stop stop-color="#366994" offset="100%"></stop>
+                            </linearGradient>
+                            <linearGradient x1="19.127525%" y1="20.5791813%" x2="90.7415328%" y2="88.4290372%" id="linearGradient-2">
+                                <stop stop-color="#FFE052" offset="0%"></stop>
+                                <stop stop-color="#FFC331" offset="100%"></stop>
+                            </linearGradient>
+                        </defs>
+                        <g>
+                            <path d="M126.915866,0.0722755491 C62.0835831,0.0722801733 66.1321288,28.1874648 66.1321288,28.1874648 L66.2044043,57.3145115 L128.072276,57.3145115 L128.072276,66.0598532 L41.6307171,66.0598532 C41.6307171,66.0598532 0.144551098,61.3549438 0.144551098,126.771315 C0.144546474,192.187673 36.3546019,189.867871 36.3546019,189.867871 L57.9649915,189.867871 L57.9649915,159.51214 C57.9649915,159.51214 56.8001363,123.302089 93.5968379,123.302089 L154.95878,123.302089 C154.95878,123.302089 189.434218,123.859386 189.434218,89.9830604 L189.434218,33.9695088 C189.434218,33.9695041 194.668541,0.0722755491 126.915866,0.0722755491 L126.915866,0.0722755491 L126.915866,0.0722755491 Z M92.8018069,19.6589497 C98.9572068,19.6589452 103.932242,24.6339846 103.932242,30.7893845 C103.932246,36.9447844 98.9572068,41.9198193 92.8018069,41.9198193 C86.646407,41.9198239 81.6713721,36.9447844 81.6713721,30.7893845 C81.6713674,24.6339846 86.646407,19.6589497 92.8018069,19.6589497 L92.8018069,19.6589497 L92.8018069,19.6589497 Z"></path>
+                            <path d="M128.757101,254.126271 C193.589403,254.126271 189.540839,226.011081 189.540839,226.011081 L189.468564,196.884035 L127.600692,196.884035 L127.600692,188.138693 L214.042251,188.138693 C214.042251,188.138693 255.528417,192.843589 255.528417,127.427208 C255.52844,62.0108566 219.318366,64.3306589 219.318366,64.3306589 L197.707976,64.3306589 L197.707976,94.6863832 C197.707976,94.6863832 198.87285,130.896434 162.07613,130.896434 L100.714182,130.896434 C100.714182,130.896434 66.238745,130.339138 66.238745,164.215486 L66.238745,220.229038 C66.238745,220.229038 61.0044225,254.126271 128.757101,254.126271 L128.757101,254.126271 L128.757101,254.126271 Z M162.87116,234.539597 C156.715759,234.539597 151.740726,229.564564 151.740726,223.409162 C151.740726,217.253759 156.715759,212.278727 162.87116,212.278727 C169.026563,212.278727 174.001595,217.253759 174.001595,223.409162 C174.001618,229.564564 169.026563,234.539597 162.87116,234.539597 L162.87116,234.539597 L162.87116,234.539597 Z"></path>
+                        </g>
+                    </svg>
+                <p class="tool-name">Python</p>   
+            </li>
+            <!-- c -->
+            <li class="list-svg-wrapper tool c-tool">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" style=" fill:#000000;">
+                    <g id="surface1">
+                    <path d="M 22.902344 3.285156 C 23.582031 2.90625 24.417969 2.90625 25.097656 3.285156 C 28.449219 5.167969 38.546875 10.835938 41.902344 12.71875 C 42.582031 13.101563 43 13.804688 43 14.566406 C 43 18.332031 43 29.667969 43 33.433594 C 43 34.195313 42.582031 34.898438 41.902344 35.28125 C 38.546875 37.164063 28.453125 42.832031 25.097656 44.714844 C 24.417969 45.09375 23.582031 45.09375 22.902344 44.714844 C 19.546875 42.832031 9.453125 37.164063 6.097656 35.28125 C 5.417969 34.898438 5 34.195313 5 33.433594 C 5 29.667969 5 18.332031 5 14.566406 C 5 13.804688 5.417969 13.101563 6.097656 12.71875 C 9.449219 10.835938 19.550781 5.167969 22.902344 3.285156 Z "></path>
+                    <path d="M 5.304688 34.402344 C 5.039063 34.046875 5 33.710938 5 33.253906 C 5 29.511719 5 18.242188 5 14.496094 C 5 13.738281 5.417969 13.039063 6.09375 12.660156 C 9.4375 10.789063 19.5 5.152344 22.84375 3.28125 C 23.519531 2.902344 24.4375 2.910156 25.113281 3.289063 C 28.457031 5.160156 38.484375 10.746094 41.828125 12.617188 C 42.097656 12.769531 42.304688 12.953125 42.488281 13.195313 Z "></path>
+                    <path style=" fill-rule:evenodd;fill:#FFFFFF;" d="M 24 10 C 31.726563 10 38 16.273438 38 24 C 38 31.726563 31.726563 38 24 38 C 16.273438 38 10 31.726563 10 24 C 10 16.273438 16.273438 10 24 10 Z M 24 17 C 27.863281 17 31 20.136719 31 24 C 31 27.863281 27.863281 31 24 31 C 20.136719 31 17 27.863281 17 24 C 17 20.136719 20.136719 17 24 17 Z "></path>
+                    <path d="M 42.484375 13.203125 C 43 13.6875 42.992188 14.414063 42.992188 14.988281 C 42.992188 18.785156 42.960938 29.578125 43 33.371094 C 43.003906 33.769531 42.871094 34.1875 42.675781 34.5 L 23.59375 24 Z "></path>
+                    </g>
+                </svg>
+                <p class="tool-name">C</p>
+            </li>
+        </ul>
+        <h3 class="subtitle">Other Experience</h3>
+        <ul class="icon-list">
+            <!-- JavaScript -->
+            <li class="list-svg-wrapper tool js-tool">
+                <svg viewBox="0 0 128 128">
+                    <path d="M1.408 1.408h125.184v125.185h-125.184z"></path>
+                    <path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zm-46.885-37.793h-11.709l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+                </svg>
+                <p class="tool-name">JavaScript</p>
+            </li>
+            <!-- Html/css -->
+            <li class="list-svg-wrapper tool html-tool">
+                <svg viewBox="0 0 128 128">
+                    <path d="M19.037 113.876l-10.005-112.215h109.936l-10.016 112.198-45.019 12.48z"></path>
+                    <path d="M64 116.8l36.378-10.086 8.559-95.878h-44.937z"></path>
+                    <path fill="#EBEBEB" d="M64 52.455h-18.212l-1.258-14.094h19.47v-13.762h-34.511l.33 3.692 3.382 37.927h30.799zM64 88.198l-.061.017-15.327-4.14-.979-10.975h-13.817l1.928 21.609 28.193 7.826.063-.017z"></path>
+                    <path fill="#fff" d="M63.952 52.455v13.763h16.947l-1.597 17.849-15.35 4.143v14.319l28.215-7.82.207-2.325 3.234-36.233.335-3.696h-3.708zM63.952 24.599v13.762h33.244l.276-3.092.628-6.978.329-3.692z"></path>
+                </svg>
+                <p class="tool-name">HTML/CSS</p>
+            </li>
+            <!-- Swift -->
+            <li class="list-svg-wrapper tool swift-tool">
+                    <svg viewBox="0 0 128 128">
+                        <path id="plain" d="M125.54,26.23a28.78,28.78,0,0,0-2.65-7.58,28.84,28.84,0,0,0-4.76-6.32,23.42,23.42,0,0,0-6.62-4.55,27.27,27.27,0,0,0-7.68-2.53c-2.65-.51-5.56-.51-8.21-.76H30.25A45.46,45.46,0,0,0,24.16,5a21.81,21.81,0,0,0-5.82,1.52c-.53.25-1.32.51-1.85.76a33.82,33.82,0,0,0-5,3.28c-.53.51-1.06.76-1.59,1.26a22.41,22.41,0,0,0-4.76,6.32,23.61,23.61,0,0,0-2.65,7.58,78.47,78.47,0,0,0-.79,7.83V93.94a39.32,39.32,0,0,0,.79,7.83,28.78,28.78,0,0,0,2.65,7.58,28.84,28.84,0,0,0,4.76,6.32,23.42,23.42,0,0,0,6.62,4.55,27.27,27.27,0,0,0,7.68,2.53c2.65.51,5.56.51,8.21.76H95.63a45.08,45.08,0,0,0,8.21-.76,27.27,27.27,0,0,0,7.68-2.53,30.13,30.13,0,0,0,6.62-4.55,22.41,22.41,0,0,0,4.76-6.32,23.61,23.61,0,0,0,2.65-7.58,78.47,78.47,0,0,0,.79-7.83V34.06A39.32,39.32,0,0,0,125.54,26.23Zm-18.79,75.54C101,91,90.37,94.33,85,96.5c-11.11,6.13-26.38,6.76-41.75.47A64.53,64.53,0,0,1,13.84,73a50,50,0,0,0,10.85,6.32c15.87,7.1,31.73,6.61,42.9,0l0,0C51.69,67.66,38.19,52.5,28.13,40.12a43.47,43.47,0,0,1-5.29-6.82C35,43.91,54.34,57.3,61.22,61.09a271.77,271.77,0,0,1-27-32.34A266.8,266.8,0,0,0,78.69,63.62c.71.38,1.26.7,1.7,1a32.71,32.71,0,0,0,1.21-3.51c3.71-12.89-.53-27.54-9.79-39.67C93.25,33.81,106,57.05,100.66,76.51c-.14.53-.29,1-.45,1.55l.19.22C111,90.91,108.07,104.3,106.75,101.77Z"></path>
+                    </svg>
+                <p class="tool-name">Swift</p>
+            </li>
+            <!-- SqLite -->
+            <li class="list-svg-wrapper tool sqlite-tool">
+
+                <p class="tool-name">SQLite</p>
+            </li>
+            <!-- Matlab -->
+            <li class="list-svg-wrapper tool matlab-tool">
+
+                <p class="tool-name">Matlab</p>
+            </li>
+            <!-- Ruby -->
+            <li class="list-svg-wrapper tool ruby-tool">
+
+                <p class="tool-name">Ruby</p>
+            </li>
+            <!-- Rust -->
+            <!-- <li class="list-svg-wrapper tool mips-tool">
+
+                <p class="tool-name">MIPS Assembly</p>
+            </li> -->
+            <!-- OCaml -->
+            <li class="list-svg-wrapper tool ocaml-tool">
+            
+                <p class="tool-name">OCaml</p>
+            </li>
+            <!-- bash -->
+            <li class="list-svg-wrapper tool bash-tool">
+                <p class="tool-name">BASH</p>
+            </li>
+            <!-- LaTeX -->
+            <li class="list-svg-wrapper tool latex-tool">
+
+                <p class="tool-name">LaTeX</p>
+            </li>
+            <!-- MIPS Assembly -->
+            <li class="list-svg-wrapper tool mips-tool">
+
+                <p class="tool-name">MIPS Assembly</p>
+            </li>
+            <!-- Google Cloud -->
+            <li class="list-svg-wrapper tool gcloud-tool">
+
+                <p class="tool-name">Google Cloud</p>
+            </li>
+            <!-- Heroku -->
+            <li class="list-svg-wrapper tool heroku-tool">
+
+                <p class="tool-name">Heroku</p>
+            </li>
+            <!-- VSCode -->
+            <li class="list-svg-wrapper tool vscode-tool">
+
+                <p class="tool-name">VS Code</p>
+            </li>
+            <!-- XCode -->
+            <li class="list-svg-wrapper tool xcode-tool">
+
+                <p class="tool-name">XCode</p>
+            </li>
+            <!-- JUnit -->
+            <li class="list-svg-wrapper tool junit-tool">
+
+                <p class="tool-name">JUnit</p>
+            </li>
+            <!-- Windows -->
+            <li class="list-svg-wrapper tool windows-tool">
+
+                <p class="tool-name">Windows</p>
+            </li>
+            <!-- OSX -->
+            <li class="list-svg-wrapper tool osx-tool">
+                
+                <p class="tool-name">Mac OSX</p>
+            </li>
+            <!-- Linux -->
+            <li class="list-svg-wrapper tool linux-tool">
+                
+                <p class="tool-name">Linux</p>
+            </li>
+        </ul>
+    </div>
+</section>
+<section id="projects">
+    <header id="projects-header" class="section-title collapsible noselect">
+        <h1>Projects   <span class="collapsible-identifier">&#x27A4;</span></h1>
+        <hr>
+    </header>
+    <div id="projects-content" class="collapsible-content">
+        <h3 class="subtitle">Projects Ordered Chronologically (Most Recent First)</h3>
+        <!-- Web Portfolio -->
+        <article class="project-wrapper">
+            <a href="https://github.com/tvarano/portfolio-site" target="_blank">
+            <img src="static/src/full-favicon.png"></a>
+            <div class="text">
+                <a href="https://github.com/tvarano/portfolio-site/tree/deploy" target="_blank"><h4 class="hvr-sweep-to-right">Web Portfolio Source</h4></a>
+                <p>Personal Project</p><p><i>2019 - 2021</i></p>
+                <p>This website is a webapp hosted on Google Cloud with flask, using Jinja for layouts and jQuery for front-end simple animations.
+                </p>
+            </div>
+            <ul>
+                <li class="tool html-tool">HTML5/CSS3</li>
+                <li class="tool python-tool">Python</li>
+                <li class="tool flask-tool">Flask</li>
+                <li class="tool cgloud-tool">Google Cloud</li>
+                <li class="tool js-tool">JavaScript</li>
+                <li class="tool jquery-tool">jQuery</li>
+            </ul>
+        </article>
+        <!-- Shell -->
+        <article class="project-wrapper">
+            <img src="https://icons.iconarchive.com/icons/blackvariant/button-ui-system-apps/1024/Terminal-icon.png">
+            <div class="text">
+                <h4>Shell</h4>
+                <p>School Project</p><p><i>2020</i></p>
+                <p>Implemented a small shell in C similar to tcsh. Allowed for functionality of subshells, 
+                    pipes, and logical functions such as AND or OR.</p>
+                </div>
+            <ul>
+                <li class="tool c-tool">C</li>
+            </ul>
+        </article>
+        <!-- Top Hits -->
+        <article class="project-wrapper">
+            <a href="https://github.com/tvarano/top-hits" target="_blank">
+            <img src="data:image/png;base64,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"></a>
+            <div class="text">
+                <a href="https://github.com/tvarano/top-hits" target="_blank"><h4 class="hvr-sweep-to-right">Month In Review</h4></a>
+                <p>Personal Project</p><p><i>2020</i></p>
+                <p>A tool using the Spotify API to create a playlist of the user's top songs in a given period of time.</p>
+            </div>
+            <ul>
+                <li class="tool html-tool">HTML5/CSS3</li>
+                <li class="tool js-tool">Node.js</li>
+                <li class="tool heroku-tool">Heroku</li>
+            </ul>
+        </article>
+        <!-- Ocean Pollution -->
+        <article class="project-wrapper">
+            <a href="https://github.com/tvarano/ocean-pollution" target="_blank">
+            <img src="https://github.com/tvarano/ocean-pollution/blob/master/static/img/favicons/favicon-192.png?raw=true"></a>
+            <div class="text">
+                <a href="https://github.com/tvarano/ocean-pollution" target="_blank"><h4 class="hvr-sweep-to-right">Ocean Pollution</h4></a>
+                <p>Competition Project</p><p><i>2020</i></p>
+                <p>A UMD Data Challenge project analyzing Booz Allen Hamilton data on ocean pollution cleanups. 
+                    Hosted a flask webapp to illustrate the effectiveness of cleanups and which places were reported to have the most pollution.
+                    Created and accessed a database with SQLite to analyze over 45,000 rows of data.</p>
+            </div>
+            <ul>
+                <li class="tool python-tool">Python</li>
+                <li class="tool html-tool">HTML5/CSS3</li>
+                <li class="tool js-tool">JavaScript</li>
+                <li class="tool git-tool">Git Team Management</li>
+                <li class="tool sqlite-tool">SQLite</li>
+            </ul>
+        </article>
+        <!-- Career Day -->
+        <article class="project-wrapper">
+            <a href="https://github.com/pas-code/career-day-sorter" target="_blank">
+            <img src="static/src/career.png"></a>
+            <div class="text">
+                <a href="https://github.com/pas-code/career-day-sorter" target="_blank"><h4 class="hvr-sweep-to-right">Career Day</h4></a>
+                <p>School Project</p><p><i>2018 - 2019</i></p>
+                <p>Sorted 800 students to their preferred three Career Day speakers in accordance with their top choices and an assortment 
+                    of other data. Lead a team of 12 student programmers in Java and Python using Git to merge different groups’ 
+                    code to a final project.</p>
+            </div>
+            <ul>
+                <li class="tool java-tool">Java</li>
+                <li class="tool python-tool">Python</li>
+                <li class="tool oauth-tool">oauth</li>
+                <li class="tool git-tool">Git Team Management</li>
+                <li class="tool html-tool">HTML5/CSS3</li>
+            </ul>
+        </article>
+        <!-- Agenda -->
+        <article class="project-wrapper">
+            <a href="https://tvarano.github.io/agenda" target="_blank">
+            <img src="https://tvarano.github.io/agenda/resources/favicons/favicon.png"></a>
+            <div class="text">
+                <a href="https://tvarano.github.io/agenda" target="_blank"><h4 class="hvr-sweep-to-right">Agenda</h4></a>
+                <p>Personal Project</p><p><i>2017 - 2018</i></p>
+                <p>Kept track of rotating schedules, labs, GPA, and time management for high school students, releasing 
+                    an app for OSX, iOS, and web, using Java, Swift, and HTML, CSS, JS, and Python respectively</p>
+            </div>
+            <ul>
+                <li class="tool java-tool">Java</li>
+                <li class="tool oauth-tool">oauth</li>
+                <li class="tool js-tool">JavaScript</li>
+                <li class="tool html-tool">HTML5/CSS3</li>
+                <li class="tool swift-tool">Swift</li>
+                <li class="tool xcode-tool">XCode</li>
+            </ul>
+        </article>
+        <!-- Spot Saver -->
+        <article class="project-wrapper">
+            <a href="https://github.com/tvarano/spot-saver" target="_blank">
+                <img src="static/src/SpotFinder.png">
+            </a>
+            <div class="text">
+                <a href="https://github.com/tvarano/spot-saver" target="_blank"><h4 class="hvr-sweep-to-right">SpotSaver</h4></a>
+                <p>Personal Project</p><p><i>2019</i></p>
+                <p>Upon user request, saves a location for later use / navigation. Essentially a manual version of Google Maps’ 
+                    “parking spot saver” tool. iOS app built with Swift. 
+                </p>
+            </div>
+            <ul>
+                <li class="tool swift-tool">Swift</li>
+                <li class="tool xcode-tool">XCode</li>
+            </ul>
+        </article>
+    </div>
+</section>
+<section id="coursework">
+    <header id="coursework-header" class="section-title collapsible noselect">
+        <h1>Coursework   <span class="collapsible-identifier">&#x27A4;</span></h1>
+        <hr>
+    </header>
+    <div id="coursework-content" class="collapsible-content">
+        <h4 class="subtitle">Degree: BS in Computer Science, Minor in Mathematics.&emsp;Completion: May 2022</h3>
+        <h4 class="subtitle">Cumulative GPA: 3.971&emsp;Cumulative Credits Completed: 79</h3>
+        <h3 class="subtitle">Previous Coursework, Chronologically Listed</h3>
+        <ul class="icon-list">
+            <h4>Fall 2019</h4>
+            <a target="_blank" href="https://www.cs.umd.edu/class/fall2019/cmsc132/">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">CMSC132 - Object-Oriented Programming II</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www-math.umd.edu/offered-courses/372-math-240-introduction-to-linear-algebra.html">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">MATH240 - Linear Algebra</p>
+                </li>
+            </a>
+            <h4>Spring 2020</h4>
+            <a target="_blank" href="http://www.cs.umd.edu/class/spring2019/cmsc250-020X/">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">CMSC250 - Discrete Structures</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.cs.umd.edu/class/spring2020/cmsc216/">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">CMSC216 - Intro to Computer Systems</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www-math.umd.edu/offered-courses/373-math-241-calculus-iii.html">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">MATH241 - Calculus III</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://app.testudo.umd.edu/soc/201908/ENES/ENES210">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">ENES210 - Entrepreneurial Opportunity Analysis and Decision-Making in 21st Century Technology Ventures</p>
+                </li>
+            </a>
+            <h4>Fall 2020</h4>
+            <a target="_blank" href="http://www.cs.umd.edu/class/fall2020/cmsc330/">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">CMSC330 - Organization of Programming Languages</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.cs.umd.edu/class/spring2020/cmsc351/">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">CMSC351 - Algorithms</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www-math.umd.edu/undergraduate/departmental-course-pages/offered-courses/381-math-401-applications-of-linear-algebra.html">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">MATH401 - Applications of Linear Algebra</p>
+                </li>
+            </a>
+            <h3 class="subtitle">Currently Enrolled</h3>
+            <a target="_blank" href="https://cmsc320.github.io/">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">CMSC320 - Introduction to Data Science</p>
+                </li>
+            </a>
+            <a target="_blank" href="https://www.cs.umd.edu/class/spring2020/cmsc451/">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">CMSC451 - Design and Analysis of Algorithms</p>
+                </li>
+            </a>
+            <a target="_blank" href="http://www.cs.umd.edu/class/fall2020/cmsc420-0201/">
+                <li class="list-svg-wrapper tool">
+                    <p class="tool-name">CMSC420 - Advanced Data Structures.</p>
+                </li>
+            </a>
+        </ul>
+    </div>
+</section>
+<section id="work-experience">
+    <header id="experience-header" class="section-title collapsible noselect">
+        <h1>Work Experience   <span class="collapsible-identifier">&#x27A4;</span></h1>
+        <hr>
+    </header>
+    <div id="experience-content" class="collapsible-content">
+        <article class="work-wrapper">
+                <img src="https://osc.umd.edu/img/logos/28_informalseal.jpg">
+                <div class="text">
+                    <h4>Teaching Assistant</h4>
+                    <p>University of Maryland</p><p><i>August 2020 - December 2020</i></p>
+                    <ul>
+                        <li>Act as office hours and grading teaching assistant for CMSC 132 (Object Oriented Programming II).</li>
+                        <li>Hold virtual office hours for students, teaching data structures in Java and helping students debug projects.</li>
+                    </ul>
+                </div>
+        </article>
+        <article class="work-wrapper">
+                <img src="https://media-exp1.licdn.com/dms/image/C4E0BAQGYt_09p79tMw/company-logo_200_200/0/1585149428407?e=2159024400&v=beta&t=LNFe5-Z-t1Fvpx0sHtNXDcuN2UGY-1R2L2nZP2W9YPE">
+                <div class="text">
+                    <h4>IT Intern</h4>
+                    <p>Fidelity National Financial</p><p><i>July 2020 - August 2020</i></p>
+                    <ul>
+                        <li>Imaged devices, set up workstations, configured print servers.</li>
+                        <li>Troubleshot various server and user issues either in person or over remote connection.</li>
+                        <li>Learned intricacies of numerous software programs regarding installation, troubleshooting, and repair, maintaining the effectiveness of coworkers</li>
+                    </ul>
+                </div>
+        </article>
+        <article class="work-wrapper">
+                <img src="https://p13cdn4static.sharpschool.com/UserFiles/Servers/Server_137149/Image/PH-Logo.png">
+                <div class="text">
+                    <h4>Teaching Assistant</h4>
+                    <p>Pascack Hills High School</p><p><i>September 2018 - June 2019</i></p>
+                    <ul>
+                        <li>Taught students fundamental programming techniques, focusing on Java. Helped debug and analyze students’ projects.</li>
+                        <li>Co-found Advanced Topics in Computer Science class, with curriculum involving Python, webdev, Swift, and Arduino.</li>
+                            
+                    </ul>
+                </div>
+        </article>
+        <article class="work-wrapper">
+                <img src="https://static.wixstatic.com/media/372dfb_bc9b49a682b5432284cd05c5b028d3aa.gif">
+                <div class="text">
+                    <h4>Ski Instructor</h4>
+                    <p>Campgaw Mountain</p><p><i>December 2020 - January 2021</i></p>
+                    <ul>
+                        <li>Taught individual students and groups of up to 8-10 skiiers fundamental skiing technique.</li>
+                        <li>Taught all ages, from four years old to adults.</li>
+                    </ul>
+                </div>
+        </article>
+        <article class="work-wrapper">
+                <img src="https://www.vagateway.com/wp-content/uploads/sites/186/2019/04/Lifetime_Athletic-e1555442188598.jpg">
+                <div class="text">
+                    <h4>Kitchen Manager</h4>
+                    <p>Life Time Athletic</p><p><i>May 2017 - January 2020</i></p>
+                    <ul>
+                        <li>Managed a team to efficiently operate a bistro kitchen.</li>
+                        <li>Cordinated with members and other managers to ensure coverage of timesheet, adequate ordering of produce nad prevention of waste.</li>
+                    </ul>
+                </div>
+        </article>
+        <article class="work-wrapper">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/53/53283.svg">
+                <div class="text">
+                    <h4>Soccer Referee</h4>
+                    <p>Montvale Athletic League</p><p><i>August 2015 - December 2017</i></p>
+                    <ul>
+                        <li>Officiated over recreational soccer games, age 6-15.</li>
+                        <li>Taught players rules and effective technique.</li>
+                        <li>Coordinated with other referees for scheduling and score reporting.</li>
+                    </ul>
+                </div>
+        </article>
+    </div>
+</section>
+<section id="resume">
+    <header id="resume-header" class="section-title noselect">
+        <a href="/resume"><h1>Resume   <span class="collapsible-identifier">&#x2924;</span></h1></a>
+        <hr>
+    </header>
 </section>
 {% endblock %}

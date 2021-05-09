@@ -1,5 +1,5 @@
 
-var isMobSize = (screen.width < 850)
+var isMobSize = (screen.width < 650)
 
 /* notify if on ie to use other browser :/ */
 var ua = window.navigator.userAgent;
@@ -18,7 +18,7 @@ function is_touch_enabled() {
 if (!isMobSize) {
     $("#mobile-nav").hide()
 } else if (is_touch_enabled()) {
-    /* if the screeen is around phone size and there is no touch screen, 
+    /* if the screen is around phone size and there is no touch screen, 
     get rid of scrollbars */
     
     $(".scrollable").each(function() {
@@ -46,7 +46,7 @@ if (isMobSize) {
     activateMobileNav()
     setTimeout(deactivateMobileNav, 1500)
 } else {
-   document.getElementById("desktop-nav").style.left = document.getElementById("logo-wrapper").getBoundingClientRect().right + 100 + "px"
+//    document.getElementById("desktop-nav").style.left = document.getElementById("logo-wrapper").getBoundingClientRect().right + 100 + "px"
 }
 
 // set active nav button
@@ -65,6 +65,20 @@ document.body.onscroll = function() {
         $("#main-header")[0].classList.add("scrolled")
 };
 
+// setting up collapsing
+$(".collapsible").each(function(index) {
+    this.addEventListener("click", function() {
+        this.classList.toggle("active");
+        let myid = this.id
+        myid = myid.substring(0, myid.indexOf("-header"))
+        let cont = $("#"+myid+"-content")[0]
+        if (cont.style.maxHeight) {
+            cont.style.maxHeight = null;
+        } else {
+            cont.style.maxHeight = cont.scrollHeight + "px";
+        }
+    })
+})
 
 // go to given address from button
 function goTo(button_id) {
