@@ -190,11 +190,11 @@ aside {
   font-size: 0.9em;
 }
 
-.project-wrapper ul {
+.project-wrapper ul.tool-list {
   list-style: none;
 }
 
-.project-wrapper ul li {
+.project-wrapper ul.tool-list li {
   display: inline-block;
   padding: 5px 10px 5px 10px;
   margin-right: 5px;
