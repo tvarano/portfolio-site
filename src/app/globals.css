@@ -58,3 +58,8 @@ body {
   letter-spacing: 0.2em;
   opacity: 0.5;
 }
+
+/* Custom cursor replaces system cursor on pointer devices */
+@media (pointer: fine) {
+  * { cursor: none !important; }
+}

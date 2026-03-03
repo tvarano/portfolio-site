@@ -31,22 +31,14 @@ export default function Hero() {
         transition={{ duration: 1 }}
       />
 
-      {/* Decorative large faded Oi character */}
-      <div
-        className="absolute top-8 right-4 md:right-12 font-oi text-[20rem] leading-none text-ink select-none pointer-events-none"
-        style={{ opacity: 0.04 }}
-        aria-hidden
-      >
-        &amp;
-      </div>
-
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-16 w-full">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-8">
           {/* Left column */}
           <div className="flex-1 text-center md:text-left">
             {/* Name */}
             <h1 className="font-oi text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-ink leading-none mb-4">
-              <AnimatedText text="Tom Varano" delay={0.4} stagger={0.05} />
+              <div><AnimatedText text="Tom" delay={0.4} stagger={0.05} /></div>
+              <div><AnimatedText text="Varano" delay={0.6} stagger={0.05} /></div>
             </h1>
 
             {/* Subtitle */}

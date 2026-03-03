@@ -6,17 +6,25 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#skills", label: "Skills" },
+  { href: "#about",      label: "About" },
   { href: "#experience", label: "Experience" },
   { href: "#coursework", label: "Coursework" },
-  { href: "#resume", label: "Resume" },
-  { href: "#connect", label: "Connect" },
+  { href: "#resume",     label: "Resume" },
+  { href: "#connect",    label: "Connect" },
 ];
+
+const SECTION_TO_PATH: Record<string, string> = {
+  hero:       "/",
+  about:      "/about",
+  experience: "/experience",
+  coursework: "/coursework",
+  resume:     "/resume",
+  connect:    "/connect",
+};
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen]         = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -24,10 +32,36 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Update URL as sections enter the center of the viewport
+  useEffect(() => {
+    const sectionIds = ["hero", "about", "experience", "coursework", "resume", "connect"];
+    const elements = sectionIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean) as HTMLElement[];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const path = SECTION_TO_PATH[entry.target.id] ?? "/";
+            history.replaceState(null, "", path);
+            break;
+          }
+        }
+      },
+      { rootMargin: "-50% 0px -50% 0px", threshold: 0 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const handleNav = (href: string) => {
     setOpen(false);
-    const el = document.querySelector(href);
-    el?.scrollIntoView({ behavior: "smooth" });
+    // Delay scroll until the drawer collapse animation finishes (250ms)
+    setTimeout(() => {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }, 280);
   };
 
   return (
@@ -79,12 +113,12 @@ export default function Header() {
             transition={{ duration: 0.25 }}
             className="md:hidden bg-cream/98 backdrop-blur-sm border-t-2 border-ink overflow-hidden"
           >
-            <nav className="flex flex-col px-6 py-4 gap-3">
+            <nav className="flex flex-col px-6 py-2">
               {NAV_LINKS.map(({ href, label }) => (
                 <button
                   key={href}
                   onClick={() => handleNav(href)}
-                  className="text-left font-oi text-xl text-ink hover:text-teal transition-colors py-1"
+                  className="w-full text-left font-mono text-xs uppercase tracking-widest text-ink hover:text-teal transition-colors py-3 border-b border-ink/10 last:border-0"
                 >
                   {label}
                 </button>

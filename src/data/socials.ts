@@ -42,10 +42,10 @@ export const socials: Social[] = [
     brandColor: "#D51007",
     icon: "FaLastfm",
   },
-  {
-    label: "Snapchat",
-    href: "https://www.snapchat.com/add/tom.varano",
-    brandColor: "#FFFC00",
-    icon: "FaSnapchat",
-  },
+  // {
+  //   label: "Snapchat",
+  //   href: "https://www.snapchat.com/add/tom.varano",
+  //   brandColor: "#FFFC00",
+  //   icon: "FaSnapchat",
+  // },
 ];

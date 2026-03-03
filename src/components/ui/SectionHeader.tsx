@@ -16,7 +16,7 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className="mb-10">
-      <h2 className={cn("font-oi text-5xl md:text-6xl text-ink inline-block", className)}>
+      <h2 className={cn("font-oi text-4xl sm:text-5xl md:text-6xl text-ink inline-block", className)}>
         {title}
       </h2>
       <div className="relative mt-1 h-5 w-48">

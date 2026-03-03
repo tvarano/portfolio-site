@@ -5,11 +5,13 @@ import Coursework from "@/components/sections/Coursework";
 import Resume from "@/components/sections/Resume";
 import Connect from "@/components/sections/Connect";
 import CustomCursor from "@/components/layout/CustomCursor";
+import SectionScroller from "@/components/layout/SectionScroller";
 import WavyDivider from "@/components/ui/WavyDivider";
 
 export default function Home() {
   return (
     <>
+      <SectionScroller />
       <CustomCursor />
 
       {/* Hero — cream */}
