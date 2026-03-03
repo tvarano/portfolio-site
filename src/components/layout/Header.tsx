@@ -111,7 +111,7 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-cream/98 backdrop-blur-sm border-t-2 border-ink overflow-hidden"
+            className="md:hidden bg-cream border-t-2 border-ink overflow-hidden"
           >
             <nav className="flex flex-col px-6 py-2">
               {NAV_LINKS.map(({ href, label }) => (
