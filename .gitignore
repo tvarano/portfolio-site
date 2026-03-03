@@ -6,3 +6,16 @@
 /token.pickle
 /app.yaml
 /env/
+
+# Next.js
+.next/
+out/
+node_modules/
+npm-debug.log*
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
