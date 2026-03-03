@@ -3,6 +3,7 @@ import type { Experience } from "@/types/experience";
 export const experiences: Experience[] = [
   {
     id: "apple",
+    tier: "featured",
     role: "Software Engineering Intern",
     company: "Apple",
     period: "May 2021 – August 2021",
@@ -16,6 +17,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "umd-ta",
+    tier: "featured",
     role: "Teaching Assistant",
     company: "University of Maryland",
     period: "August 2020 – May 2022",
@@ -27,6 +29,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "fidelity",
+    tier: "featured",
     role: "IT Intern",
     company: "Fidelity National Financial",
     period: "July 2020 – August 2020",
@@ -38,6 +41,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "phhs-ta",
+    tier: "minor",
     role: "Teaching Assistant",
     company: "Pascack Hills High School",
     period: "September 2018 – June 2019",
@@ -48,6 +52,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "campgaw",
+    tier: "minor",
     role: "Ski Instructor",
     company: "Campgaw Mountain",
     period: "December 2020 – January 2021",
@@ -58,6 +63,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "lifetime",
+    tier: "minor",
     role: "Kitchen Manager",
     company: "Life Time Athletic",
     period: "May 2017 – January 2020",
@@ -68,6 +74,7 @@ export const experiences: Experience[] = [
   },
   {
     id: "referee",
+    tier: "minor",
     role: "Soccer Referee",
     company: "Montvale Athletic League",
     period: "August 2015 – December 2017",

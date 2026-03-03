@@ -58,11 +58,13 @@ export default function RetroButton({
         rel={rel}
         className={sharedClass}
         style={baseStyle}
+        whileHover={{ y: -2, boxShadow: variant !== "ghost" ? "6px 6px 0px #14213D" : "none" }}
         whileTap={{
           x: 3,
           y: 3,
           boxShadow: variant !== "ghost" ? "1px 1px 0px #14213D" : "none",
         }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
       >
         {children}
       </motion.a>
@@ -73,11 +75,13 @@ export default function RetroButton({
     <motion.button
       className={sharedClass}
       style={baseStyle}
+      whileHover={{ y: -2, boxShadow: variant !== "ghost" ? "6px 6px 0px #14213D" : "none" }}
       whileTap={{
         x: 3,
         y: 3,
         boxShadow: variant !== "ghost" ? "1px 1px 0px #14213D" : "none",
       }}
+      transition={{ type: "spring", stiffness: 300, damping: 20 }}
       onClick={onClick}
       type="button"
     >

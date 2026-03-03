@@ -5,4 +5,5 @@ export interface Experience {
   period: string;
   bullets: string[];
   accent?: string;
+  tier?: "featured" | "minor";
 }

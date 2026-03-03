@@ -45,13 +45,13 @@ export default function Hero() {
           {/* Left column */}
           <div className="flex-1 text-center md:text-left">
             {/* Name */}
-            <h1 className="font-oi text-7xl md:text-9xl text-ink leading-none mb-4">
+            <h1 className="font-oi text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-ink leading-none mb-4">
               <AnimatedText text="Tom Varano" delay={0.4} stagger={0.05} />
             </h1>
 
             {/* Subtitle */}
             <motion.p
-              className="font-mono text-xl text-teal uppercase tracking-[0.3em] mb-8"
+              className="font-mono text-base sm:text-xl text-teal uppercase tracking-[0.3em] mb-8"
               {...fadeUp(0.9)}
             >
               Software Engineer

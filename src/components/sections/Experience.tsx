@@ -5,7 +5,11 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
 import RetroBox from "@/components/ui/RetroBox";
+import RetroCard from "@/components/ui/RetroCard";
 import { experiences } from "@/data/experience";
+
+const featured = experiences.filter((e) => e.tier === "featured");
+const minor = experiences.filter((e) => e.tier === "minor");
 
 export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,7 +46,7 @@ export default function Experience() {
           </div>
 
           <div className="space-y-10 md:space-y-0">
-            {experiences.map((exp, i) => {
+            {featured.map((exp, i) => {
               const isLeft = i % 2 === 0;
               const cardAccent = exp.accent ?? "#D4930A";
               return (
@@ -55,6 +59,7 @@ export default function Experience() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
+                  whileHover={{ y: -4, x: -2, transition: { type: "spring", stiffness: 300, damping: 20 } }}
                 >
                   {/* Card */}
                   <div className="md:w-[calc(50%-2rem)]">
@@ -92,6 +97,28 @@ export default function Experience() {
                 </motion.div>
               );
             })}
+
+            {/* Earlier Work summary card */}
+            {minor.length > 0 && (
+              <ScrollReveal delay={0.1}>
+                <div className="md:mt-10">
+                  <RetroCard
+                    accentColor="#D4930A"
+                    surface="#FFF8EC"
+                    className="p-5"
+                  >
+                    <h3 className="font-oi text-xl text-ink mb-4">Earlier Work</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {minor.map((exp) => (
+                        <p key={exp.id} className="font-mono text-xs text-ink/75">
+                          {exp.role} · {exp.company} · {exp.period}
+                        </p>
+                      ))}
+                    </div>
+                  </RetroCard>
+                </div>
+              </ScrollReveal>
+            )}
           </div>
         </div>
       </div>

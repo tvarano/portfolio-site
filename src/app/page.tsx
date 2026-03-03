@@ -1,6 +1,5 @@
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
-import Skills from "@/components/sections/Skills";
 import Experience from "@/components/sections/Experience";
 import Coursework from "@/components/sections/Coursework";
 import Resume from "@/components/sections/Resume";
@@ -19,17 +18,11 @@ export default function Home() {
       {/* cream → teal-soft */}
       <WavyDivider from="#FEFAE0" to="#E0F2F3" />
 
-      {/* About — teal-soft */}
+      {/* About — teal-soft (includes mini skills panel) */}
       <About />
 
-      {/* teal-soft → cream */}
-      <WavyDivider from="#E0F2F3" to="#FEFAE0" flip />
-
-      {/* Skills — cream */}
-      <Skills />
-
-      {/* cream → amber-soft */}
-      <WavyDivider from="#FEFAE0" to="#FDF3D9" />
+      {/* teal-soft → amber-soft */}
+      <WavyDivider from="#E0F2F3" to="#FDF3D9" />
 
       {/* Experience — amber-soft */}
       <Experience />

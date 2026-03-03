@@ -1,10 +1,27 @@
+"use client";
+
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
-import RetroBox from "@/components/ui/RetroBox";
+import RetroCard from "@/components/ui/RetroCard";
 import RetroButton from "@/components/ui/RetroButton";
+import Tag from "@/components/ui/Tag";
 import { SITE } from "@/lib/constants";
+import { skills } from "@/data/skills";
 
-const FACTS = ["UMD 2022", "CS + Math Minor", "Cum Laude", "GPA 3.91"];
+const primary = skills.filter((s) => s.tier === "primary");
+const secondary = skills.filter((s) => s.tier === "secondary");
+
+const LANG_ICONS: Record<string, string> = {
+  Python: "🐍",
+  Swift: "🍎",
+  Java: "☕",
+};
+
+const PRIMARY_COLORS: Record<string, string> = {
+  Python: "#006D77",
+  Swift: "#B5179E",
+  Java: "#D4930A",
+};
 
 export default function About() {
   return (
@@ -42,23 +59,35 @@ export default function About() {
             </div>
           </ScrollReveal>
 
-          {/* Fact chips */}
+          {/* Mini skills panel */}
           <ScrollReveal delay={0.25}>
-            <RetroBox accentColor="#006D77" surface="#E8F7F8" className="p-5">
-              <div className="flex flex-wrap gap-3">
-                {FACTS.map((fact) => (
-                  <span
-                    key={fact}
-                    className="font-mono text-xs bg-teal/10 text-teal px-4 py-1.5 rounded-full border-2 border-teal uppercase tracking-widest"
-                  >
-                    {fact}
-                  </span>
-                ))}
-                <p className="w-full font-mono text-xs text-ink/50 mt-2 uppercase tracking-widest">
-                  University of Maryland · College Park
-                </p>
+            <div className="space-y-3">
+              <p className="groovy-label mb-2">Languages</p>
+              <div className="grid grid-cols-3 gap-2">
+                {primary.map((skill) => {
+                  const accent = PRIMARY_COLORS[skill.name] ?? "#14213D";
+                  return (
+                    <RetroCard
+                      key={skill.name}
+                      accentColor={accent}
+                      surface="white"
+                      offset={4}
+                      className="flex flex-col items-center gap-1 py-3 px-1 cursor-default"
+                    >
+                      <span className="text-2xl">{LANG_ICONS[skill.name]}</span>
+                      <span className="font-mono text-xs text-ink uppercase tracking-wide">
+                        {skill.name}
+                      </span>
+                    </RetroCard>
+                  );
+                })}
               </div>
-            </RetroBox>
+              <div className="flex flex-wrap gap-1.5 mt-2">
+                {secondary.slice(0, 10).map((s) => (
+                  <Tag key={s.name} label={s.name} color={s.color} />
+                ))}
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </div>

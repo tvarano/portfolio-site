@@ -8,7 +8,7 @@ import RetroButton from "@/components/ui/RetroButton";
 import RetroBox from "@/components/ui/RetroBox";
 import { SITE } from "@/lib/constants";
 
-const RESUME_PATH = "https://github.com/tvarano/resume/raw/master/output/programming/thomas-varano-resume.pdf";
+const RESUME_PATH = "/resume/thomas-varano-resume.pdf";
 
 export default function Resume() {
   const [copied, setCopied] = useState(false);
