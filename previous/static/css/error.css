@@ -1,0 +1,16 @@
+main h1 {
+    font-family: var(--h-font-family);
+    font-size: 4em;
+    font-weight: 300;
+    margin-left: 20px;
+}
+
+main h2 {
+    margin-left: 25px;
+    font-family: var(--p-font-family);
+    font-weight: 300;
+}
+
+main a {
+    text-decoration: underline white;
+}

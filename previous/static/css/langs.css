@@ -1,0 +1,113 @@
+/* langs and toolss */
+
+.icon-list {
+    padding: 0;
+}
+
+.icon-list li {
+    list-style: none;
+    background-color: var(--primary);
+    color: white;
+}
+
+.list-svg-wrapper svg {
+    float: left;
+    padding: 2px;
+    vertical-align: middle;
+    border-radius: 5px; 
+    width: 25px; height: 25px;
+    /* background: white; */
+    fill: var(--secondary) !important;
+    margin-right: 5px;
+}
+
+.list-svg-wrapper p {
+    margin-top: 7px;
+    margin-bottom: 0px;
+    display: inline-block;
+}
+
+.list-svg-wrapper {
+    display: inline-block;
+    /* width: 120px; */
+    border: 1px solid gray;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    padding: 5px !important;
+    border-radius: 2px;
+}
+
+/* ------------------------------- language / tool colors ------------------------------- */
+
+.tool {
+    color: black;
+    padding: 2px;
+    border-width: 0px;
+    border-style: solid;
+    transition: all ease 0.25s;
+    --webkit-transition: all ease 0.25s;
+}
+
+.tool:hover {
+    color: white;
+    background: var(--secondary);
+    transition: all ease 0.25s;
+    --webkit-transition: all ease 0.25s;
+}
+
+.java-tool:hover {
+    background: #EA2D2E;
+}
+
+.python-tool:hover {
+    background: #306998;
+}
+
+.js-tool:hover {
+    background: #F0DB4F;
+}
+
+.swift-tool:hover {
+    background: #FF2612;
+}
+
+.html-tool:hover {
+    background: rgb(228,77,38);
+    background: linear-gradient(100deg, rgba(228,77,38,1) 50%, rgba(38,77,228,1) 70%);
+}
+
+.c-tool:hover {
+    background: #283593;
+}
+
+.git-tool:hover {
+    background: #F34F29;
+}
+
+.oauth-tool:hover {
+    background: black;
+}
+
+.flask-tool:hover {
+    background: gray;
+}
+
+.heroku-tool:hover {
+    background: #6762a6;
+}
+
+.jquery-tool:hover {
+    background: #0868ac;
+}
+
+.xcode-tool:hover {
+    background: #14a2e7;
+}
+
+.sqlite-tool:hover {
+    background: #69bbea;
+}
+
+.gcloud-tool:hover {
+    background: #ea4335;
+}
