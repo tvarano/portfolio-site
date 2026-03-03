@@ -1,6 +1,5 @@
 "use client";
 import { useEffect } from "react";
-import { usePathname } from "next/navigation";
 
 const PATH_TO_SECTION: Record<string, string> = {
   "/about":      "about",
@@ -11,16 +10,14 @@ const PATH_TO_SECTION: Record<string, string> = {
 };
 
 export default function SectionScroller() {
-  const pathname = usePathname();
-
   useEffect(() => {
-    const sectionId = PATH_TO_SECTION[pathname];
+    const sectionId = PATH_TO_SECTION[window.location.pathname];
     if (!sectionId) return;
     const timer = setTimeout(() => {
       document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
     }, 300);
     return () => clearTimeout(timer);
-  }, [pathname]);
+  }, []); // runs once on mount — ignores subsequent replaceState calls
 
   return null;
 }

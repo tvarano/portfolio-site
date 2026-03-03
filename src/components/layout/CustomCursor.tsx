@@ -38,9 +38,12 @@ export default function CustomCursor() {
     const onLeave = () => { visible = false; };
     const onOver  = (e: MouseEvent) => { if ((e.target as Element).closest(INTERACTIVE)) hovering = true; };
     const onOut   = (e: MouseEvent) => { if (!(e.relatedTarget as Element | null)?.closest(INTERACTIVE)) hovering = false; };
+    // Hide cursor immediately when touch input is detected (handles hybrid devices)
+    const onTouch = () => { visible = false; hovering = false; };
 
     window.addEventListener("mousemove",  onMove);
     window.addEventListener("mouseleave", onLeave);
+    window.addEventListener("touchstart", onTouch, { passive: true });
     document.addEventListener("mouseover",  onOver);
     document.addEventListener("mouseout",   onOut);
 
@@ -87,6 +90,7 @@ export default function CustomCursor() {
     return () => {
       window.removeEventListener("mousemove",  onMove);
       window.removeEventListener("mouseleave", onLeave);
+      window.removeEventListener("touchstart", onTouch);
       document.removeEventListener("mouseover",  onOver);
       document.removeEventListener("mouseout",   onOut);
       cancelAnimationFrame(rafId);
