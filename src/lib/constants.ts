@@ -7,9 +7,10 @@ export const SITE = {
 } as const;
 
 export const COLORS = {
-  background: "#FAFAF8",
-  navy: "#14213D",
-  coral: "#FF6B6B",
-  yellow: "#FFD166",
-  muted: "#6B7280",
+  cream: "#FEFAE0",
+  ink: "#14213D",
+  teal: "#006D77",
+  amber: "#D4930A",
+  magenta: "#B5179E",
+  emerald: "#1A7A4A",
 } as const;

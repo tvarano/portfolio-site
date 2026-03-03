@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Caveat, Patrick_Hand, Inter } from "next/font/google";
+import { Oi, DM_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -9,15 +9,16 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const caveat = Caveat({
-  subsets: ["latin"],
-  variable: "--font-caveat",
-});
-
-const patrickHand = Patrick_Hand({
+const oi = Oi({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-patrick-hand",
+  variable: "--font-oi",
+});
+
+const dmMono = DM_Mono({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+  variable: "--font-dm-mono",
 });
 
 export const metadata: Metadata = {
@@ -43,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${caveat.variable} ${patrickHand.variable}`}
+      className={`${inter.variable} ${oi.variable} ${dmMono.variable}`}
     >
       <body>
         <Header />

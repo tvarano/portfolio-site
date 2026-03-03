@@ -12,7 +12,7 @@ import {
 } from "react-icons/fa";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
-import SketchButton from "@/components/ui/SketchButton";
+import RetroButton from "@/components/ui/RetroButton";
 import { socials } from "@/data/socials";
 
 const ICON_MAP: Record<string, React.ReactNode> = {
@@ -23,6 +23,17 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   FaLastfm: <FaLastfm size={20} />,
   FaSnapchat: <FaSnapchat size={20} />,
   FaEnvelope: <FaEnvelope size={20} />,
+};
+
+// Map brand colors to readable text colors
+const TEXT_FOR_BG: Record<string, string> = {
+  "#24292e": "#FEFAE0",
+  "#0A66C2": "#FEFAE0",
+  "#FF6B6B": "#14213D",
+  "#E1306C": "#FEFAE0",
+  "#1DB954": "#14213D",
+  "#D51007": "#FEFAE0",
+  "#FFFC00": "#14213D",
 };
 
 const container = {
@@ -37,14 +48,18 @@ const item = {
 
 export default function Connect() {
   return (
-    <section id="connect" className="py-24 px-6 bg-background">
+    <section id="connect" className="py-24 px-6 bg-ink">
       <div className="max-w-3xl mx-auto">
         <ScrollReveal>
-          <SectionHeader title="Connect" />
+          <SectionHeader
+            title="Connect"
+            className="text-cream"
+            accentColor="#D4930A"
+          />
         </ScrollReveal>
 
         <ScrollReveal delay={0.1}>
-          <p className="font-caveat text-4xl md:text-5xl text-navy mb-10">
+          <p className="font-oi text-5xl text-amber mb-10">
             hi, I&apos;m Tom.
           </p>
         </ScrollReveal>
@@ -58,17 +73,19 @@ export default function Connect() {
         >
           {socials.map((social) => (
             <motion.div key={social.label} variants={item}>
-              <SketchButton
+              <RetroButton
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full"
+                accentBg={social.brandColor}
+                accentText={TEXT_FOR_BG[social.brandColor] ?? "#FEFAE0"}
               >
                 <span className="flex items-center justify-center gap-2 w-full py-1">
                   {ICON_MAP[social.icon]}
                   <span>{social.label}</span>
                 </span>
-              </SketchButton>
+              </RetroButton>
             </motion.div>
           ))}
         </motion.div>

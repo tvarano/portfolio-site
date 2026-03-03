@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
 import Tag from "@/components/ui/Tag";
+import RetroBox from "@/components/ui/RetroBox";
 import { skills } from "@/data/skills";
 
 const primary = skills.filter((s) => s.tier === "primary");
@@ -14,6 +15,12 @@ const LANG_ICONS: Record<string, string> = {
   Python: "🐍",
   Swift: "🍎",
   Java: "☕",
+};
+
+const PRIMARY_COLORS: Record<string, string> = {
+  Python: "#006D77",
+  Swift: "#B5179E",
+  Java: "#D4930A",
 };
 
 const container = {
@@ -28,55 +35,60 @@ const item = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-white/40">
+    <section id="skills" className="py-24 px-6 bg-cream">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <SectionHeader title="Skills" />
+          <SectionHeader title="Skills" accentColor="#D4930A" />
         </ScrollReveal>
 
         {/* Primary */}
         <ScrollReveal delay={0.1}>
-          <p className="font-patrick text-muted text-sm mb-4">Most Proficient</p>
+          <p className="groovy-label mb-4">Most Proficient</p>
         </ScrollReveal>
 
         <motion.div
-          className="grid grid-cols-3 gap-4 mb-10"
+          className="grid grid-cols-3 gap-5 mb-12"
           variants={container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          {primary.map((skill) => (
-            <motion.div
-              key={skill.name}
-              variants={item}
-              whileHover={{ y: -4, scale: 1.05 }}
-              className="flex flex-col items-center gap-2 py-6 rounded-xl bg-white border border-navy/10 shadow-sm cursor-default"
-            >
-              <span className="text-4xl">{LANG_ICONS[skill.name]}</span>
-              <span className="font-patrick text-base text-navy">{skill.name}</span>
-            </motion.div>
-          ))}
+          {primary.map((skill) => {
+            const accent = PRIMARY_COLORS[skill.name] ?? "#14213D";
+            return (
+              <motion.div
+                key={skill.name}
+                variants={item}
+                whileHover={{ y: -6, x: -3 }}
+                transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              >
+                <RetroBox
+                  accentColor={accent}
+                  surface="white"
+                  className="flex flex-col items-center gap-2 py-6 cursor-default"
+                >
+                  <span className="text-4xl">{LANG_ICONS[skill.name]}</span>
+                  <span className="font-mono text-sm text-ink uppercase tracking-wide">{skill.name}</span>
+                </RetroBox>
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         {/* Secondary */}
         <ScrollReveal delay={0.15}>
-          <p className="font-patrick text-muted text-sm mb-3">Other Experience</p>
+          <p className="groovy-label mb-3">Other Experience</p>
         </ScrollReveal>
 
         <motion.div
-          className="flex flex-wrap gap-2 mb-8"
+          className="flex flex-wrap gap-2 mb-10"
           variants={container}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          {secondary.map((skill, i) => (
-            <motion.div
-              key={skill.name}
-              variants={item}
-              style={{ rotate: (i % 2 === 0 ? 1 : -1) * (Math.random() * 1.5) }}
-            >
+          {secondary.map((skill) => (
+            <motion.div key={skill.name} variants={item}>
               <Tag label={skill.name} color={skill.color} />
             </motion.div>
           ))}
@@ -84,7 +96,7 @@ export default function Skills() {
 
         {/* Tools */}
         <ScrollReveal delay={0.2}>
-          <p className="font-patrick text-muted text-sm mb-3">Tools &amp; Environments</p>
+          <p className="groovy-label mb-3">Tools &amp; Environments</p>
         </ScrollReveal>
 
         <motion.div
@@ -96,7 +108,7 @@ export default function Skills() {
         >
           {tools.map((skill) => (
             <motion.div key={skill.name} variants={item}>
-              <Tag label={skill.name} className="text-xs" />
+              <Tag label={skill.name} />
             </motion.div>
           ))}
         </motion.div>

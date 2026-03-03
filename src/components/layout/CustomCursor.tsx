@@ -39,12 +39,12 @@ export default function CustomCursor() {
     <>
       {/* Dot */}
       <motion.div
-        className="fixed top-0 left-0 z-[9999] w-2.5 h-2.5 rounded-full bg-coral pointer-events-none"
+        className="fixed top-0 left-0 z-[9999] w-2.5 h-2.5 rounded-full bg-teal pointer-events-none"
         style={{ x: mx, y: my, translateX: "-50%", translateY: "-50%", opacity: visible ? 1 : 0 }}
       />
       {/* Lagging ring */}
       <motion.div
-        className="fixed top-0 left-0 z-[9998] w-9 h-9 rounded-full border-2 border-coral/50 pointer-events-none"
+        className="fixed top-0 left-0 z-[9998] w-9 h-9 rounded-full border-2 border-teal/50 pointer-events-none"
         style={{ x: rx, y: ry, translateX: "-50%", translateY: "-50%", opacity: visible ? 1 : 0 }}
       />
     </>

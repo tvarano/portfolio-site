@@ -4,10 +4,11 @@ import { useState } from "react";
 import { Download, Copy, Printer } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
-import SketchButton from "@/components/ui/SketchButton";
+import RetroButton from "@/components/ui/RetroButton";
+import RetroBox from "@/components/ui/RetroBox";
 import { SITE } from "@/lib/constants";
 
-const RESUME_PATH = "/resume/thomas-varano-resume.pdf";
+const RESUME_PATH = "https://github.com/tvarano/resume/raw/master/output/programming/thomas-varano-resume.pdf";
 
 export default function Resume() {
   const [copied, setCopied] = useState(false);
@@ -31,69 +32,72 @@ export default function Resume() {
   };
 
   return (
-    <section id="resume" className="py-24 px-6 bg-white/40">
+    <section id="resume" className="py-24 px-6 bg-[#E0F5EA]">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
-          <SectionHeader title="Resume" />
+          <SectionHeader title="Resume" accentColor="#1A7A4A" />
         </ScrollReveal>
 
         {/* Action buttons */}
         <ScrollReveal delay={0.1}>
           <div className="flex flex-wrap gap-3 mb-8">
-            <SketchButton
+            <RetroButton
               href={RESUME_PATH}
               target="_blank"
               rel="noopener noreferrer"
+              accentBg="#1A7A4A"
+              accentText="#FEFAE0"
             >
               <span className="flex items-center gap-1.5">
                 <Download size={14} />
                 Download
               </span>
-            </SketchButton>
+            </RetroButton>
 
-            <SketchButton onClick={handleCopy}>
+            <RetroButton onClick={handleCopy} variant="ghost">
               <span className="flex items-center gap-1.5">
                 <Copy size={14} />
                 {copied ? "Copied!" : "Copy Link"}
               </span>
-            </SketchButton>
+            </RetroButton>
 
-            <SketchButton onClick={handlePrint}>
+            <RetroButton onClick={handlePrint} variant="ghost">
               <span className="flex items-center gap-1.5">
                 <Printer size={14} />
                 Print
               </span>
-            </SketchButton>
+            </RetroButton>
           </div>
         </ScrollReveal>
 
-        {/* PDF iframe — hidden on mobile, show download CTA */}
+        {/* PDF iframe */}
         <ScrollReveal delay={0.2}>
-          <div
-            className="hidden md:block w-full rounded-xl overflow-hidden border border-navy/15 shadow-sm"
-            style={{ height: "80vh" }}
-          >
-            <iframe
-              src={RESUME_PATH}
-              className="w-full h-full"
-              title="Thomas Varano Resume"
-            />
+          <div className="hidden md:block">
+            <RetroBox accentColor="#1A7A4A" offset={8} className="overflow-hidden" style={{ height: "80vh" }}>
+              <iframe
+                src={RESUME_PATH}
+                className="w-full h-full"
+                title="Thomas Varano Resume"
+              />
+            </RetroBox>
           </div>
 
-          <div className="md:hidden mt-4 p-6 rounded-xl bg-yellow/20 border border-yellow/50 text-center">
-            <p className="font-patrick text-navy mb-4">
+          <div className="md:hidden mt-4 p-6 border-2 border-emerald/40 bg-emerald/10 text-center">
+            <p className="font-mono text-sm text-ink mb-4 uppercase tracking-widest">
               PDF preview works best on desktop.
             </p>
-            <SketchButton
+            <RetroButton
               href={RESUME_PATH}
               target="_blank"
               rel="noopener noreferrer"
+              accentBg="#1A7A4A"
+              accentText="#FEFAE0"
             >
               <span className="flex items-center gap-1.5">
                 <Download size={14} />
                 Download Resume
               </span>
-            </SketchButton>
+            </RetroButton>
           </div>
         </ScrollReveal>
       </div>

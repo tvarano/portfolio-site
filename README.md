@@ -9,12 +9,12 @@ Check it out at https://www.tomvarano.com
 
 ## Requirements
 
-- Node.js 20+ (see note below)
+- Node.js 22+ (see note below)
 - npm
 
-> **Node version:** The repo uses Node 20. If your shell defaults to an older version, activate it first:
+> **Node version:** The repo requires Node 22.
 > ```bash
-> source ~/.nvm/nvm.sh && nvm use 20
+> source ~/.nvm/nvm.sh && nvm use 22
 > ```
 
 ## Install
@@ -38,8 +38,8 @@ npm run build
 npm start
 ```
 
-`build` compiles and statically optimizes all pages. `start` serves the compiled output.
-
+`build` compiles and statically optimizes all pages. `start` serves  compiled output.
+the
 ## Project structure
 
 ```

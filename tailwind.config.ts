@@ -5,16 +5,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#FAFAF8",
-        navy: "#14213D",
-        coral: "#FF6B6B",
-        yellow: "#FFD166",
-        muted: "#6B7280",
+        cream: "#FEFAE0",
+        ink: "#14213D",
+        teal: "#006D77",
+        amber: "#D4930A",
+        magenta: "#B5179E",
+        emerald: "#1A7A4A",
       },
       fontFamily: {
-        caveat: ["var(--font-caveat)", "cursive"],
-        patrick: ["var(--font-patrick-hand)", "sans-serif"],
+        oi: ["var(--font-oi)", "serif"],
+        mono: ["var(--font-dm-mono)", "monospace"],
         inter: ["var(--font-inter)", "sans-serif"],
+      },
+      boxShadow: {
+        retro: "5px 5px 0px #14213D",
+        "retro-sm": "3px 3px 0px #14213D",
+        "retro-lg": "8px 8px 0px #14213D",
+        "retro-teal": "5px 5px 0px #006D77",
+        "retro-amber": "5px 5px 0px #D4930A",
+        "retro-magenta": "5px 5px 0px #B5179E",
+        "retro-emerald": "5px 5px 0px #1A7A4A",
       },
       keyframes: {
         bounce: {

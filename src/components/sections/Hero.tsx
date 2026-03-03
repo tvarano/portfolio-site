@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Mail, Github, FileText, Linkedin, ChevronDown } from "lucide-react";
 import AnimatedText from "@/components/ui/AnimatedText";
-import SketchButton from "@/components/ui/SketchButton";
+import RetroButton from "@/components/ui/RetroButton";
 import { SITE } from "@/lib/constants";
 
 const fadeUp = (delay: number) => ({
@@ -21,28 +21,37 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-cream"
     >
-      {/* Background grid */}
+      {/* Dot-grid background */}
       <motion.div
-        className="absolute inset-0 grid-bg"
+        className="absolute inset-0 dot-grid"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       />
+
+      {/* Decorative large faded Oi character */}
+      <div
+        className="absolute top-8 right-4 md:right-12 font-oi text-[20rem] leading-none text-ink select-none pointer-events-none"
+        style={{ opacity: 0.04 }}
+        aria-hidden
+      >
+        &amp;
+      </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-24 pb-16 w-full">
         <div className="flex flex-col-reverse md:flex-row items-center gap-12 md:gap-8">
           {/* Left column */}
           <div className="flex-1 text-center md:text-left">
             {/* Name */}
-            <h1 className="font-caveat text-6xl md:text-7xl lg:text-8xl text-coral leading-none mb-3">
+            <h1 className="font-oi text-7xl md:text-9xl text-ink leading-none mb-4">
               <AnimatedText text="Tom Varano" delay={0.4} stagger={0.05} />
             </h1>
 
-            {/* Title */}
+            {/* Subtitle */}
             <motion.p
-              className="font-patrick text-2xl md:text-3xl text-navy mb-8"
+              className="font-mono text-xl text-teal uppercase tracking-[0.3em] mb-8"
               {...fadeUp(0.9)}
             >
               Software Engineer
@@ -56,49 +65,23 @@ export default function Hero() {
               transition={{ duration: 0.4, delay: 1.1 }}
             >
               {[
-                {
-                  label: "Email",
-                  href: `mailto:${SITE.email}`,
-                  icon: <Mail size={15} />,
-                  delay: 0,
-                },
-                {
-                  label: "GitHub",
-                  href: SITE.github,
-                  icon: <Github size={15} />,
-                  delay: 0.08,
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                },
-                {
-                  label: "Resume",
-                  href: "/resume/thomas-varano-resume.pdf",
-                  icon: <FileText size={15} />,
-                  delay: 0.16,
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                },
-                {
-                  label: "LinkedIn",
-                  href: SITE.linkedin,
-                  icon: <Linkedin size={15} />,
-                  delay: 0.24,
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                },
-              ].map(({ label, href, icon, delay, target, rel }) => (
+                { label: "Email", href: `mailto:${SITE.email}`, icon: <Mail size={15} />, delay: 0, variant: "primary" as const },
+                { label: "GitHub", href: SITE.github, icon: <Github size={15} />, delay: 0.08, target: "_blank", rel: "noopener noreferrer", variant: "secondary" as const },
+                { label: "Resume", href: "/resume/thomas-varano-resume.pdf", icon: <FileText size={15} />, delay: 0.16, target: "_blank", rel: "noopener noreferrer", variant: "ghost" as const },
+                { label: "LinkedIn", href: SITE.linkedin, icon: <Linkedin size={15} />, delay: 0.24, target: "_blank", rel: "noopener noreferrer", variant: "ghost" as const },
+              ].map(({ label, href, icon, delay, target, rel, variant }) => (
                 <motion.div
                   key={label}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.1 + delay, duration: 0.35 }}
                 >
-                  <SketchButton href={href} target={target} rel={rel}>
+                  <RetroButton href={href} target={target} rel={rel} variant={variant}>
                     <span className="flex items-center gap-1.5">
                       {icon}
                       {label}
                     </span>
-                  </SketchButton>
+                  </RetroButton>
                 </motion.div>
               ))}
             </motion.div>
@@ -112,8 +95,8 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
           >
             <div
-              className="relative w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-4 border-coral/30 shadow-xl"
-              style={{ transform: "rotate(-3deg)" }}
+              className="relative w-56 h-56 md:w-72 md:h-72 overflow-hidden border-4 border-ink"
+              style={{ boxShadow: "8px 8px 0 #006D77", transform: "rotate(-2deg)" }}
             >
               <Image
                 src="/images/profme.jpg"
@@ -131,7 +114,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <motion.button
         onClick={scrollToAbout}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-coral/70 hover:text-coral transition-colors"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-teal/70 hover:text-teal transition-colors"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.5 }}

@@ -4,15 +4,15 @@ import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
-import SketchCard from "@/components/ui/SketchCard";
+import RetroCard from "@/components/ui/RetroCard";
 import Tag from "@/components/ui/Tag";
 import { projects } from "@/data/projects";
 
 const CATEGORY_COLOR: Record<string, string> = {
-  Personal: "#FF6B6B",
+  Personal: "#006D77",
   School: "#14213D",
-  Intern: "#FFD166",
-  Competition: "#6B7280",
+  Intern: "#D4930A",
+  Competition: "#B5179E",
 };
 
 const container = {
@@ -27,10 +27,10 @@ const item = {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 bg-background">
+    <section id="projects" className="py-24 px-6 bg-cream">
       <div className="max-w-5xl mx-auto">
         <ScrollReveal>
-          <SectionHeader title="Projects" />
+          <SectionHeader title="Projects" accentColor="#006D77" />
         </ScrollReveal>
 
         <motion.div
@@ -41,21 +41,21 @@ export default function Projects() {
           viewport={{ once: true, amount: 0.1 }}
         >
           {projects.map((project, i) => {
-            const rotate = i % 2 === 0 ? 0.8 : -0.8;
+            const accent = CATEGORY_COLOR[project.category] ?? "#14213D";
             return (
               <motion.div key={project.id} variants={item} className="break-inside-avoid">
-                <SketchCard rotate={rotate} className="w-full">
+                <RetroCard accentColor={accent} className="w-full">
                   <div className="p-5">
                     {/* Header row */}
                     <div className="flex items-start justify-between gap-2 mb-2">
                       <div>
                         <span
-                          className="font-patrick text-xs px-2 py-0.5 rounded-full text-white"
-                          style={{ backgroundColor: CATEGORY_COLOR[project.category] }}
+                          className="font-mono text-xs px-3 py-0.5 rounded-full text-cream border-2"
+                          style={{ backgroundColor: accent, borderColor: accent }}
                         >
                           {project.category}
                         </span>
-                        <span className="font-patrick text-xs text-muted ml-2">
+                        <span className="groovy-label ml-2">
                           {project.year}
                         </span>
                       </div>
@@ -64,7 +64,7 @@ export default function Projects() {
                           href={project.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-coral hover:text-coral/70 transition-colors flex-shrink-0"
+                          className="text-teal hover:text-teal/70 transition-colors flex-shrink-0"
                           aria-label={`Open ${project.title}`}
                         >
                           <ExternalLink size={15} />
@@ -73,12 +73,12 @@ export default function Projects() {
                     </div>
 
                     {/* Title */}
-                    <h3 className="font-caveat text-2xl text-navy mb-2 leading-tight">
+                    <h3 className="font-oi text-2xl text-ink mb-2 leading-tight">
                       {project.title}
                     </h3>
 
                     {/* Description */}
-                    <p className="font-inter text-sm text-navy/75 leading-relaxed mb-3">
+                    <p className="font-inter text-sm text-ink/75 leading-relaxed mb-3">
                       {project.description}
                     </p>
 
@@ -88,7 +88,7 @@ export default function Projects() {
                         {project.bullets.map((b, bi) => (
                           <li
                             key={bi}
-                            className="font-inter text-xs text-navy/65 pl-3 relative before:content-['–'] before:absolute before:left-0 before:text-coral"
+                            className="font-inter text-xs text-ink/65 pl-3 relative before:content-['–'] before:absolute before:left-0 before:text-teal"
                           >
                             {b}
                           </li>
@@ -99,11 +99,11 @@ export default function Projects() {
                     {/* Tech tags */}
                     <div className="flex flex-wrap gap-1.5 mt-3">
                       {project.tech.map((t) => (
-                        <Tag key={t} label={t} className="text-xs py-0.5 px-2" />
+                        <Tag key={t} label={t} />
                       ))}
                     </div>
                   </div>
-                </SketchCard>
+                </RetroCard>
               </motion.div>
             );
           })}

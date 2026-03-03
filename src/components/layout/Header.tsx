@@ -8,7 +8,6 @@ import { cn } from "@/lib/utils";
 const NAV_LINKS = [
   { href: "#about", label: "About" },
   { href: "#skills", label: "Skills" },
-  { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
   { href: "#coursework", label: "Coursework" },
   { href: "#resume", label: "Resume" },
@@ -35,15 +34,20 @@ export default function Header() {
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        scrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        scrolled
+          ? "bg-cream/95 backdrop-blur-sm border-b-2 border-ink"
+          : "bg-transparent"
       )}
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
         <a
           href="#hero"
-          onClick={(e) => { e.preventDefault(); handleNav("#hero"); }}
-          className="font-caveat text-2xl text-coral font-bold tracking-tight"
+          onClick={(e) => {
+            e.preventDefault();
+            handleNav("#hero");
+          }}
+          className="font-oi text-2xl text-teal"
         >
           TV
         </a>
@@ -57,7 +61,7 @@ export default function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-navy p-1"
+          className="md:hidden text-ink p-1"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -73,14 +77,14 @@ export default function Header() {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.25 }}
-            className="md:hidden bg-background/98 backdrop-blur-sm border-t border-navy/10 overflow-hidden"
+            className="md:hidden bg-cream/98 backdrop-blur-sm border-t-2 border-ink overflow-hidden"
           >
             <nav className="flex flex-col px-6 py-4 gap-3">
               {NAV_LINKS.map(({ href, label }) => (
                 <button
                   key={href}
                   onClick={() => handleNav(href)}
-                  className="text-left font-patrick text-lg text-navy hover:text-coral transition-colors py-1"
+                  className="text-left font-oi text-xl text-ink hover:text-teal transition-colors py-1"
                 >
                   {label}
                 </button>
@@ -105,12 +109,12 @@ function NavLink({
   return (
     <motion.button
       onClick={() => onClick(href)}
-      className="relative font-patrick text-sm text-navy hover:text-coral transition-colors group"
+      className="relative font-mono text-xs uppercase tracking-widest text-ink hover:text-teal transition-colors group"
       whileHover="hovered"
     >
       {label}
       <motion.span
-        className="absolute -bottom-0.5 left-0 h-0.5 bg-coral rounded-full"
+        className="absolute -bottom-0.5 left-0 h-0.5 bg-teal"
         variants={{
           hovered: { width: "100%", opacity: 1 },
         }}
