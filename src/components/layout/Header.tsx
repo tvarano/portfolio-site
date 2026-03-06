@@ -58,10 +58,14 @@ export default function Header() {
 
   const handleNav = (href: string) => {
     setOpen(false);
-    // Delay scroll until the drawer collapse animation finishes (250ms)
-    setTimeout(() => {
-      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
-    }, 280);
+    const target = document.querySelector(href);
+    if (target) {
+      setTimeout(() => {
+        target.scrollIntoView({ behavior: "smooth" });
+      }, 280);
+    } else {
+      window.location.href = "/" + href;
+    }
   };
 
   return (

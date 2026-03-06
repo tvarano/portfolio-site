@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <>
       <SectionScroller />
-      <CustomCursor />
+      {/* <CustomCursor /> */}
 
       {/* Hero — cream */}
       <Hero />

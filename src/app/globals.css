@@ -61,5 +61,5 @@ body {
 
 /* Custom cursor replaces system cursor on pointer devices */
 @media (pointer: fine) {
-  * { cursor: none !important; }
+  /* * { cursor: none !important; } */
 }

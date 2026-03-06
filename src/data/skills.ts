@@ -5,13 +5,13 @@ export const skills: Skill[] = [
   { name: "C++", tier: "primary", color: "#3776AB" },
   { name: "Java", tier: "primary", color: "#007396" },
   { name: "AR / VR", tier: "primary"},
-  
+
   // Secondary — tag grid
   { name: "Android / AOSP", tier: "secondary", color: "#3DDC84" },
   { name: "Kotlin", tier: "secondary", color: "#7F52FF" },
   { name: "Accessibility", tier: "secondary"},
   { name: "OpenXR", tier: "secondary" },
-  
+
   // tertiary, for later
   { name: "HTML / CSS", tier: "tertiary", color: "#E34F26" },
   { name: "Swift", tier: "tertiary", color: "#FA7343" },
@@ -20,15 +20,15 @@ export const skills: Skill[] = [
   { name: "Ruby", tier: "tertiary", color: "#CC342D" },
   { name: "OCaml", tier: "tertiary", color: "#EC6813" },
   { name: "BASH", tier: "tertiary" },
-  
-  // Soft skills 
+
+  // Soft skills
   { name: "Technical Design", tier: "soft" },
   { name: "XFN Collaboration", tier: "soft" },
   { name: "Prototyping", tier: "soft" },
   { name: "3D Math / Programming", tier: "soft" },
   { name: "ECS design", tier: "soft" },
   { name: "Rapid rampup", tier: "soft" },
-  
+
   // Tools
   { name: "VS Code", tier: "tools" },
   { name: "Xcode", tier: "tools" },

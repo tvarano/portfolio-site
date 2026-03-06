@@ -37,19 +37,18 @@ export default function About() {
           <ScrollReveal delay={0.1} className="md:col-span-2">
             <div className="space-y-4 font-inter text-ink/85 leading-relaxed text-base">
               <p>
-                Hi! I&apos;m a software engineer and recent graduate from the University
-                of Maryland, graduating cum laude in 2022 with a BS in Computer
-                Science and a minor in Mathematics.
+                Hi! I&apos;m a software engineer with serveral years' experience at major Tech firms (Apple, Meta), 
+                with a strong skillset in C++ and Java systems. I've most recently worked for Meta, building Input 
+                experiences for the Meta Quest (see specific projects below). This work has exposed me to 
+                multiple implementation stacks, up and down the entirety of Android.
               </p>
               <p>
-                My interests span networks, systems programming, backend web
-                development, and information processing. I love building things
-                that are fast, elegant, and actually solve problems — this site
-                included.
+                I am comfortable prototyping, planning projects, working collaboratively with designers and project leads,
+                building complex, durable systems, and reasoning in 3D. Additionally, due to the breadth of my previous scope, I am 
+                adaptable -- comfortable ramping up and quickly providing impact with new codebases, tools, and technologies.
               </p>
               <p>
-                Feel free to reach out — I&apos;m always happy to chat about software,
-                projects, or anything else.
+                Feel free to reach out -— I&apos;m always happy to chat!
               </p>
             </div>
 
