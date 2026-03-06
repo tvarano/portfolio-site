@@ -10,17 +10,18 @@ import { skills } from "@/data/skills";
 
 const primary = skills.filter((s) => s.tier === "primary");
 const secondary = skills.filter((s) => s.tier === "secondary");
+const soft = skills.filter((s) => s.tier === "soft");
 
 const LANG_ICONS: Record<string, string> = {
-  Python: "🐍",
-  Swift: "🍎",
+  "C++": "⚙️",
   Java: "☕",
+  Android: "🤖",
 };
 
 const PRIMARY_COLORS: Record<string, string> = {
-  Python: "#006D77",
-  Swift: "#B5179E",
+  "C++": "#00599C",
   Java: "#D4930A",
+  Android: "#34A853",
 };
 
 export default function About() {
@@ -86,6 +87,20 @@ export default function About() {
                 {secondary.slice(0, 10).map((s) => (
                   <Tag key={s.name} label={s.name} color={s.color} />
                 ))}
+              </div>
+              <div className="mt-3">
+                <p className="font-mono text-[10px] text-ink/40 uppercase tracking-widest mb-1.5">Also</p>
+                <div className="flex flex-wrap gap-1">
+                  {soft.map((s) => (
+                    <span
+                      key={s.name}
+                      className="font-inter text-[11px] text-ink/50 italic"
+                    >
+                      {s.name}
+                      {soft.indexOf(s) < soft.length - 1 && <span className="mx-0.5">·</span>}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </ScrollReveal>
