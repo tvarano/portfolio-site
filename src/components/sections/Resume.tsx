@@ -41,6 +41,9 @@ export default function Resume() {
 
         {/* Action buttons */}
         <ScrollReveal delay={0.1}>
+          <div className="flex flex-wrap mb-6">
+          <p>It's outdated, more coming soon!</p>
+          </div>
           <div className="flex flex-wrap gap-3 mb-8">
             <RetroButton
               href={RESUME_PATH}
