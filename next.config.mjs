@@ -7,7 +7,7 @@ const nextConfig = {
     return [
       { source: '/about',      destination: '/' },
       { source: '/experience', destination: '/' },
-      { source: '/coursework', destination: '/' },
+      { source: '/education',  destination: '/' },
       { source: '/resume',     destination: '/' },
       { source: '/connect',    destination: '/' },
     ];
