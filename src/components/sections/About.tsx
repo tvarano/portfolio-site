@@ -15,13 +15,13 @@ const soft = skills.filter((s) => s.tier === "soft");
 const LANG_ICONS: Record<string, string> = {
   "C++": "⚙️",
   Java: "☕",
-  Android: "🤖",
+  "AR / VR": "🥽",
 };
 
 const PRIMARY_COLORS: Record<string, string> = {
   "C++": "#00599C",
   Java: "#D4930A",
-  Android: "#34A853",
+  "AR / VR": "#B5179E",
 };
 
 export default function About() {

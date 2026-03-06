@@ -2,16 +2,26 @@ import type { Experience } from "@/types/experience";
 
 export const experiences: Experience[] = [
   {
+    id: "meta",
+    tier: "featured",
+    role: "Software Engineer",
+    company: "Meta",
+    period: "August 2022 – Present",
+    bullets: [
+      // TODO: fill in
+    ],
+    accent: "#0668E1",
+  },
+  {
     id: "apple",
     tier: "featured",
     role: "Software Engineering Intern",
     company: "Apple",
     period: "May 2021 – August 2021",
     bullets: [
-      "Validated syncing capabilities of the Shortcuts app on iOS and macOS.",
-      "Quickly comprehended and navigated an expansive codebase, developing new tests and improving their underlying structure.",
-      "Developed MultiDevice testing approach to synchronize multiple devices in a test run using Swift custom Test Plans.",
-      "Triaged test results and reported specific failures to Shortcuts developers to improve the product.",
+      "Validated syncing capabilities of the Shortcuts app on iOS and macOS via UI tests.",
+      "Developed MultiDevice testing architecture to sync multiple devices in a test run. Used Swift to run custom Test Plans, including network failure, race-condition editing, and more.",
+      "Triaged test results, reported specific failures to app developers to improve product and reduce bugcount.",
     ],
     accent: "#FFD166",
   },
@@ -22,9 +32,10 @@ export const experiences: Experience[] = [
     company: "University of Maryland",
     period: "August 2020 – May 2022",
     bullets: [
-      "Taught student-led course CMSC 389O: The Coding Interview — covering behavioral and technical interview techniques.",
-      "Served as office hours and grading TA for CMSC 132 (Object-Oriented Programming II).",
-      "Held virtual office hours teaching data structures in Java and helping students debug projects.",
+      "Taught student-let course CMSC 389O, The Coding Interview. Taught students techniques for behavioral and technical interviews. Taught interview algorithm techniques to a classroom and ran mock interviews.",
+      "Graded assignments and held office hours, for CMSC 132, Object Oriented Programming II.",
+      "Assisted students with debugging projects and understanding exam results.",
+
     ],
   },
   {

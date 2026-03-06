@@ -4,10 +4,11 @@ export const skills: Skill[] = [
   // Primary — big icon cards
   { name: "C++", tier: "primary", color: "#3776AB" },
   { name: "Java", tier: "primary", color: "#007396" },
-  { name: "Android", tier: "primary", color: "#007396" },
+  { name: "AR / VR", tier: "primary"},
   
   // Secondary — tag grid
-  { name: "AOSP", tier: "secondary", color: "#CE412B" },
+  { name: "Android / AOSP", tier: "secondary", color: "#3DDC84" },
+  { name: "Kotlin", tier: "secondary", color: "#7F52FF" },
   { name: "Accessibility", tier: "secondary"},
   { name: "OpenXR", tier: "secondary" },
   
