@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils";
 const NAV_LINKS = [
   { href: "#about",      label: "About" },
   { href: "#experience", label: "Experience" },
-  { href: "#coursework", label: "Coursework" },
+  { href: "#education", label: "Education" },
   { href: "#resume",     label: "Resume" },
   { href: "#connect",    label: "Connect" },
 ];
@@ -17,7 +17,7 @@ const SECTION_TO_PATH: Record<string, string> = {
   hero:       "/",
   about:      "/about",
   experience: "/experience",
-  coursework: "/coursework",
+  education: "/education",
   resume:     "/resume",
   connect:    "/connect",
 };
@@ -34,7 +34,7 @@ export default function Header() {
 
   // Update URL as sections enter the center of the viewport
   useEffect(() => {
-    const sectionIds = ["hero", "about", "experience", "coursework", "resume", "connect"];
+    const sectionIds = ["hero", "about", "experience", "education", "resume", "connect"];
     const elements = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean) as HTMLElement[];

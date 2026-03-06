@@ -1,7 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Experience from "@/components/sections/Experience";
-import Coursework from "@/components/sections/Coursework";
+import Education from "@/components/sections/Education";
 import Resume from "@/components/sections/Resume";
 import Connect from "@/components/sections/Connect";
 import CustomCursor from "@/components/layout/CustomCursor";
@@ -32,8 +32,8 @@ export default function Home() {
       {/* amber-soft → magenta-soft */}
       <WavyDivider from="#FDF3D9" to="#FCE4F8" />
 
-      {/* Coursework — magenta-soft */}
-      <Coursework />
+      {/* Education — magenta-soft */}
+      <Education />
 
       {/* magenta-soft → emerald-soft */}
       <WavyDivider from="#FCE4F8" to="#E0F5EA" flip />
