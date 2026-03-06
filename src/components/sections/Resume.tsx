@@ -9,13 +9,14 @@ import RetroBox from "@/components/ui/RetroBox";
 import { SITE } from "@/lib/constants";
 
 const RESUME_PATH = "/resume/thomas-varano-resume.pdf";
+const RESUME_VIEW_PATH = "/resume/view";
 
 export default function Resume() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(`${SITE.url}${RESUME_PATH}`);
+      await navigator.clipboard.writeText(`${SITE.url}${RESUME_VIEW_PATH}`);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -43,14 +44,25 @@ export default function Resume() {
           <div className="flex flex-wrap gap-3 mb-8">
             <RetroButton
               href={RESUME_PATH}
-              target="_blank"
-              rel="noopener noreferrer"
+              download="thomas-varano-resume.pdf"
               accentBg="#1A7A4A"
               accentText="#FEFAE0"
             >
               <span className="flex items-center gap-1.5">
                 <Download size={14} />
                 Download
+              </span>
+            </RetroButton>
+
+            <RetroButton
+              href={RESUME_VIEW_PATH}
+              target="_blank"
+              rel="noopener noreferrer"
+              accentBg="#1A7A4A"
+              accentText="#FEFAE0"
+            >
+              <span className="flex items-center gap-1.5">
+                View
               </span>
             </RetroButton>
 
@@ -87,15 +99,14 @@ export default function Resume() {
               PDF preview works best on desktop.
             </p>
             <RetroButton
-              href={RESUME_PATH}
+              href={RESUME_VIEW_PATH}
               target="_blank"
               rel="noopener noreferrer"
               accentBg="#1A7A4A"
               accentText="#FEFAE0"
             >
               <span className="flex items-center gap-1.5">
-                <Download size={14} />
-                Download Resume
+                View Resume
               </span>
             </RetroButton>
           </div>

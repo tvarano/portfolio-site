@@ -12,6 +12,7 @@ interface RetroButtonProps {
   variant?: "primary" | "secondary" | "ghost";
   target?: string;
   rel?: string;
+  download?: string;
   accentBg?: string;
   accentText?: string;
 }
@@ -30,6 +31,7 @@ export default function RetroButton({
   variant = "primary",
   target,
   rel,
+  download,
   accentBg,
   accentText,
 }: RetroButtonProps) {
@@ -56,6 +58,7 @@ export default function RetroButton({
         href={href}
         target={target}
         rel={rel}
+        download={download}
         className={sharedClass}
         style={baseStyle}
         whileHover={{ y: -2, boxShadow: variant !== "ghost" ? "6px 6px 0px #14213D" : "none" }}

@@ -4,7 +4,7 @@ import { useEffect } from "react";
 const PATH_TO_SECTION: Record<string, string> = {
   "/about":      "about",
   "/experience": "experience",
-  "/coursework": "coursework",
+  "/education": "education",
   "/resume":     "resume",
   "/connect":    "connect",
 };
