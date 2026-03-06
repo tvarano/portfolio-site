@@ -8,7 +8,7 @@ export const experiences: Experience[] = [
     company: "Meta",
     period: "August 2022 – Present",
     bullets: [
-      // TODO: fill in
+      "More info coming soon!",
     ],
     accent: "#0668E1",
   },
