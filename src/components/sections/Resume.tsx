@@ -16,7 +16,7 @@ export default function Resume() {
 
   const handleCopy = async () => {
     try {
-      await navigator.clipboard.writeText(`${SITE.url}${RESUME_PATH}`);
+      await navigator.clipboard.writeText(`${SITE.url}${RESUME_VIEW_PATH}`);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
