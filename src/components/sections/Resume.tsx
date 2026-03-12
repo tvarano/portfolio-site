@@ -8,7 +8,7 @@ import RetroButton from "@/components/ui/RetroButton";
 import RetroBox from "@/components/ui/RetroBox";
 import { SITE } from "@/lib/constants";
 
-const RESUME_PATH = "/resume/thomas-varano-resume.pdf";
+const RESUME_PATH = "/resume/tom-varano-resume.pdf";
 const RESUME_VIEW_PATH = "/resume/view";
 
 export default function Resume() {

@@ -91,7 +91,7 @@ export default function Hero() {
               style={{ boxShadow: "8px 8px 0 #006D77", transform: "rotate(-2deg)" }}
             >
               <Image
-                src="/images/profme.jpg"
+                src="/images/profme3_crop.jpg"
                 alt="Tom Varano"
                 fill
                 className="object-cover"

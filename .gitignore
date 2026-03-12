@@ -6,6 +6,8 @@
 /token.pickle
 /app.yaml
 /env/
+*.DS_Store
+
 
 # Next.js
 .next/
