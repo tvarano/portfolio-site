@@ -10,15 +10,37 @@ export const experiences: Experience[] = [
     bullets: [
       "Engineered input platform features for Meta Quest VR operating system (Meta Horizon OS, Android-based).",
       "Shipped input features to millions of users across the entire OS stack, from AOSP, to the OpenXR Runtime implementation, to Shell, to 2D Android applications. Stack: C++, Java, Kotlin",
-      "Demonstrated rapid technical ramp-up across diverse, high-complexity codebases. Led wiki and onboarding initiatives for tribal-knowledge-rich ecosystems.",
-      "Owned maintenance and improvement of the entire Quest Accessibility suite (Screen Reader, Voice Control, Captions, Text to Speech, UI settings). Oversaw features previously managed by 8 engineers.",
-      "Outlined overhaul of technical stack, aligning with AOSP principles and significantly reducing tech debt. Streamlined multiple feature components, including telemetry, installation, and settings.",
-      "Shipped Voice Control, allowing users to control devices with their voice.",
-      "Proactively proposed and prototyped multiple feature improvements and rewrites, collaborating with designers to ensure maximum usability and minimize bugs.",
-      "Architected infrastructure to support new input paradigm, deeply integrating with multiple UI frameworks, focusing on efficiency and stability.",
-      "Led 7-engineer cross-org team through design and prototyping phase, investigating many in-depth pathways. Communicated project status and timeline with cross-company stakeholders.",
-      "Delivered prototype over 8-month timeline, established technical approach for production execution.",
-      "Designed and launched data-driven 3P device onboarding framework for Logitech MX Ink Stylus. Significantly reduced engineer load required to add new peripherals in Shell, from weeks to minutes of work. Collaborated with engineers across OS stack, from firmware to end app developers.",
+    ],
+    projects: [
+      {
+        name: "New Input Paradigm",
+        bullets: [
+          "Architected infrastructure to support new input paradigm, deeply integrating with multiple UI frameworks, focusing on efficiency and stability.",
+          "Led 7-engineer cross-org team through design and prototyping phase, investigating many in-depth pathways. Communicated project status and timeline with cross-company stakeholders.",
+          "Delivered prototype over 8-month timeline, established technical approach for production execution.",
+        ],
+      },
+      {
+        name: "Quest Accessibility",
+        bullets: [
+          "Owned maintenance and improvement of the entire Quest Accessibility suite (Screen Reader, Voice Control, Captions, Text to Speech, UI settings). Oversaw features previously managed by 8 engineers.",
+          "Outlined overhaul of technical stack, aligning with AOSP principles and significantly reducing tech debt. Streamlined multiple feature components, including telemetry, installation, and settings.",
+          "Shipped Voice Control, allowing users to control devices with their voice.",
+          "Proactively proposed and prototyped multiple feature improvements and rewrites, collaborating with designers to ensure maximum usability and minimize bugs.",
+        ],
+      },
+      {
+        name: "3P Device Onboarding",
+        bullets: [
+          "Designed and launched data-driven 3P device onboarding framework for Logitech MX Ink Stylus. Significantly reduced engineer load required to add new peripherals in Shell, from weeks to minutes of work. Collaborated with engineers across OS stack, from firmware to end app developers.",
+        ],
+      },
+      {
+        name: "Onboarding & Knowledge Sharing",
+        bullets: [
+          "Demonstrated rapid technical ramp-up across diverse, high-complexity codebases. Led wiki and onboarding initiatives for tribal-knowledge-rich ecosystems.",
+        ],
+      },
     ],
     accent: "#0668E1",
   },
