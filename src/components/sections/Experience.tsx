@@ -1,15 +1,60 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionHeader from "@/components/ui/SectionHeader";
 import RetroBox from "@/components/ui/RetroBox";
 import RetroCard from "@/components/ui/RetroCard";
 import { experiences } from "@/data/experience";
+import type { Project } from "@/types/experience";
 
 const featured = experiences.filter((e) => e.tier === "featured");
 const minor = experiences.filter((e) => e.tier === "minor");
+
+function ProjectDropdown({ project, accentColor }: { project: Project; accentColor: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-t border-ink/10">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between py-2 px-1 text-left cursor-pointer group"
+      >
+        <span className="font-mono text-sm font-semibold text-ink/85 group-hover:text-ink transition-colors">
+          {project.name}
+        </span>
+        <motion.span
+          animate={{ rotate: open ? 180 : 0 }}
+          transition={{ duration: 0.2 }}
+          className="text-xs"
+          style={{ color: accentColor }}
+        >
+          ▼
+        </motion.span>
+      </button>
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.ul
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className="overflow-hidden space-y-1.5 pb-2"
+          >
+            {project.bullets.map((b, bi) => (
+              <li
+                key={bi}
+                className="font-inter text-sm text-ink/75 pl-4 relative before:content-['▸'] before:absolute before:left-0 before:text-xs"
+              >
+                {b}
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default function Experience() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -20,7 +65,7 @@ export default function Experience() {
   const pathLength = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
 
   return (
-    <section id="experience" ref={sectionRef} className="py-24 px-6 bg-[#FDF3D9]">
+    <section id="experience" ref={sectionRef} className="py-24 px-6 bg-[#FDF3D9] overflow-x-clip">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <SectionHeader title="Experience" accentColor="#D4930A" />
@@ -86,6 +131,17 @@ export default function Experience() {
                           </li>
                         ))}
                       </ul>
+                      {exp.projects && exp.projects.length > 0 && (
+                        <div className="mt-3">
+                          {exp.projects.map((project, pi) => (
+                            <ProjectDropdown
+                              key={pi}
+                              project={project}
+                              accentColor={cardAccent}
+                            />
+                          ))}
+                        </div>
+                      )}
                     </RetroBox>
                   </div>
 
