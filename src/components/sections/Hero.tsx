@@ -59,16 +59,16 @@ export default function Hero() {
               {[
                 { label: "Email", href: `mailto:${SITE.email}`, icon: <Mail size={15} />, delay: 0, variant: "primary" as const },
                 { label: "GitHub", href: SITE.github, icon: <Github size={15} />, delay: 0.08, target: "_blank", rel: "noopener noreferrer", variant: "secondary" as const },
-                { label: "Resume", href: "/resume/thomas-varano-resume.pdf", icon: <FileText size={15} />, delay: 0.16, target: "_blank", rel: "noopener noreferrer", variant: "ghost" as const },
+                { label: "Resume", icon: <FileText size={15} />, delay: 0.16, variant: "ghost" as const, onClick: () => document.querySelector("#resume")?.scrollIntoView({ behavior: "smooth" }) },
                 { label: "LinkedIn", href: SITE.linkedin, icon: <Linkedin size={15} />, delay: 0.24, target: "_blank", rel: "noopener noreferrer", variant: "ghost" as const },
-              ].map(({ label, href, icon, delay, target, rel, variant }) => (
+              ].map(({ label, href, icon, delay, target, rel, variant, onClick }) => (
                 <motion.div
                   key={label}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.1 + delay, duration: 0.35 }}
                 >
-                  <RetroButton href={href} target={target} rel={rel} variant={variant}>
+                  <RetroButton href={href} target={target} rel={rel} variant={variant} onClick={onClick}>
                     <span className="flex items-center gap-1.5">
                       {icon}
                       {label}

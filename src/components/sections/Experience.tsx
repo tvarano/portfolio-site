@@ -65,7 +65,7 @@ export default function Experience() {
   const pathLength = useTransform(scrollYProgress, [0, 0.8], [0, 1]);
 
   return (
-    <section id="experience" ref={sectionRef} className="py-24 px-6 bg-[#FDF3D9]">
+    <section id="experience" ref={sectionRef} className="py-24 px-6 bg-[#FDF3D9] overflow-x-clip">
       <div className="max-w-4xl mx-auto">
         <ScrollReveal>
           <SectionHeader title="Experience" accentColor="#D4930A" />
