@@ -20,3 +20,10 @@ npm-debug.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Env secrets (never commit)
+.env*.local
+.env
+
+# Friendsquare local dev data (file-store backend)
+.data/
